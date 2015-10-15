@@ -45,4 +45,18 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+
+    // ============================= CUSTOM JS =============================
+
+    $('#download-btn').on('click', function (){
+        console.log("clicked");
+        // $('.download-app-row').fadeOut('slow');
+        // $('.subscription-form').toggleClass('hide show');
+        // $('.subscription-form').fadeIn('slow');
+        $('.download-app-row').fadeOut('slow', function(){
+            $('.subscription-form').toggleClass('hide show');
+            $('.subscription-form').fadeIn('slow');
+        });
+    });
+
 })(jQuery); // End of use strict
