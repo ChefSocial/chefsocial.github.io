@@ -488,6 +488,17 @@ hr {
   .subscription-section.bg-dark {
     /*background-color: black;*/ }
 
+.profile-section {
+  padding: 80px 0; }
+
+#contact {
+  color: white;
+  background-color: #222; }
+  #contact a {
+    color: white !important; }
+  #contact i {
+    color: #EC6862; }
+
 /*.carousel-inner {
   .active {
     &.left {

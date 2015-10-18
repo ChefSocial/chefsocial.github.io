@@ -681,7 +681,20 @@ hr {
         /*background-color: black;*/
     }
 }
+.profile-section{
+    padding: 80px 0;
+}
 
+#contact{
+    color: white;
+    background-color: #222;
+    a{
+        color: white!important;
+    }
+    i{
+        color: $food-red;
+    }
+}
 /*.carousel-inner {
   .active {
     &.left {
