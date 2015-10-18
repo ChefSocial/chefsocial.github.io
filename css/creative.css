@@ -116,12 +116,12 @@ aside {
       font-weight: 700;
       color: #222; }
     .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
-      color: #f39c12; }
+      color: #EC6862; }
   .navbar-default .nav > li.active > a {
-    color: #f39c12 !important;
+    color: #EC6862 !important;
     background-color: transparent; }
     .navbar-default .nav > li.active > a:focus {
-      color: #f39c12 !important;
+      color: #EC6862 !important;
       background-color: transparent; }
     .navbar-default .nav > li.active > a:hover, .navbar-default .nav > li.active > a:focus:hover {
       background-color: transparent; }
@@ -153,7 +153,7 @@ aside {
         .navbar-default.affix .nav > li > a:focus {
           color: #222; }
         .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
-          color: #f39c12; } }
+          color: #EC6862; } }
 header {
   position: relative;
   width: 100%;

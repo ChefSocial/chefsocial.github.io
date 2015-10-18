@@ -164,14 +164,14 @@ aside {
         color: #222;
       }
       &:hover, &:focus:hover {
-        color: #f39c12;
+        color: $food-red;
       }
     }
     &.active > a {
-      color: #f39c12 !important;
+      color: $food-red !important;
       background-color: transparent;
       &:focus {
-        color: #f39c12 !important;
+        color: $food-red !important;
         background-color: transparent;
       }
       &:hover, &:focus:hover {
@@ -216,7 +216,7 @@ aside {
           color: #222;
         }
         &:hover, &:focus:hover {
-          color: #f39c12;
+          color: $food-red;
         }
       }
     }
