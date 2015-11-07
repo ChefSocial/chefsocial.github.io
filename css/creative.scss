@@ -745,6 +745,53 @@ hr {
 .carousel-inner .next        { left:  25%; }
 .carousel-control.left,.carousel-control.right {background-image:none;}*/
 
+/* ================== Page2 BLOG CSS ================== */
+
+.blog-wrapper{
+  margin-top: 6rem;
+}
+.page2-bg{
+  /*background-color: rgb(34, 34, 34)!important;*/
+  color: black!important;
+}
+.blog-wrapper{
+  .blog-post-navigation{
+    margin-top: 1rem;
+    ul{
+      list-style: none;
+      li{
+        padding: .5rem 0;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+  .blog-post{
+    .content{
+      font-family: "GothamXLight",'Helvetica Neue',Arial,sans-serif;
+      .content-heading{
+        font-weight: 600;
+      }
+      p{
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .image-element{
+        padding-bottom: 2rem;
+      }
+      .quote{
+        padding: 2rem 4rem;     
+        .quote-col{
+          border-left: 3px solid black;
+        }
+        .content{
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
 /* ================== COMMON CSS ================== */
 .heading {
     font-family: $heading-font-family;
@@ -770,7 +817,7 @@ hr {
   text-align: left;
 }
 .center-align {
-  text-align: center;
+  text-align: -webkit-center;
 }
 .padding-0 {
   padding: 0;
@@ -783,4 +830,16 @@ hr {
 }
 .padding-right-10{
     padding-right: 10px!important;
+}
+.font-weight-600{
+  font-weight: 600!important;
+}
+.sm-img{
+  max-width: 40%;
+}
+.md-img{
+  max-width: 75%;
+}
+.lg-img{
+  max-width: 100%;
 }

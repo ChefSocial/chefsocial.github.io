@@ -539,6 +539,38 @@ hr {
 /*.carousel-inner .active.left { left: -25%; }
 .carousel-inner .next        { left:  25%; }
 .carousel-control.left,.carousel-control.right {background-image:none;}*/
+/* ================== Page2 BLOG CSS ================== */
+.blog-wrapper {
+  margin-top: 6rem; }
+
+.page2-bg {
+  /*background-color: rgb(34, 34, 34)!important;*/
+  color: black !important; }
+
+.blog-wrapper .blog-post-navigation {
+  margin-top: 1rem; }
+  .blog-wrapper .blog-post-navigation ul {
+    list-style: none; }
+    .blog-wrapper .blog-post-navigation ul li {
+      padding: .5rem 0;
+      font-size: 15px;
+      font-weight: 600; }
+.blog-wrapper .blog-post .content {
+  font-family: "GothamXLight",'Helvetica Neue',Arial,sans-serif; }
+  .blog-wrapper .blog-post .content .content-heading {
+    font-weight: 600; }
+  .blog-wrapper .blog-post .content p {
+    font-size: 18px;
+    font-weight: 600; }
+  .blog-wrapper .blog-post .content .image-element {
+    padding-bottom: 2rem; }
+  .blog-wrapper .blog-post .content .quote {
+    padding: 2rem 4rem; }
+    .blog-wrapper .blog-post .content .quote .quote-col {
+      border-left: 3px solid black; }
+    .blog-wrapper .blog-post .content .quote .content {
+      font-style: italic; }
+
 /* ================== COMMON CSS ================== */
 .heading {
   font-family: "ProximaNova", "Helvetica Neue", Arial, sans-serif; }
@@ -564,7 +596,7 @@ hr {
   text-align: left; }
 
 .center-align {
-  text-align: center; }
+  text-align: -webkit-center; }
 
 .padding-0 {
   padding: 0; }
@@ -577,5 +609,17 @@ hr {
 
 .padding-right-10 {
   padding-right: 10px !important; }
+
+.font-weight-600 {
+  font-weight: 600 !important; }
+
+.sm-img {
+  max-width: 40%; }
+
+.md-img {
+  max-width: 75%; }
+
+.lg-img {
+  max-width: 100%; }
 
 /*# sourceMappingURL=creative.css.map */
