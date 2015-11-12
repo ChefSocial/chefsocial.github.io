@@ -636,4 +636,11 @@ hr {
 .lg-img .sub-text {
   width: 100%; }
 
+/* ================== MEDIA QUERIES ================== */
+@media (max-width: 992px) {
+  .sm-img img, .md-img img {
+    max-width: 80%; }
+  .sm-img .sub-text, .md-img .sub-text {
+    width: 80%; } }
+
 /*# sourceMappingURL=creative.css.map */

@@ -870,3 +870,16 @@ hr {
     width: 100%;
   }
 }
+
+/* ================== MEDIA QUERIES ================== */
+
+@media (max-width: 992px) {
+  .sm-img, .md-img {
+    img{
+      max-width: 80%;
+    }
+    .sub-text{
+      width: 80%;
+    }
+  }
+}
