@@ -767,6 +767,10 @@ hr {
     }
   }
   .blog-post{
+    .small-text{
+      font-family: "GothamXLight",'Helvetica Neue',Arial,sans-serif!important;
+      color: black;
+    }
     .content{
       font-family: "GothamXLight",'Helvetica Neue',Arial,sans-serif;
       .content-heading{
@@ -834,12 +838,35 @@ hr {
 .font-weight-600{
   font-weight: 600!important;
 }
+.xs-img{
+  img {
+    max-width: 25%;
+  }
+  .sub-text{
+    width: 25%;
+  }
+}
 .sm-img{
-  max-width: 40%;
+  img {
+    max-width: 40%;
+  }
+  .sub-text{
+    width: 40%;
+  }
 }
 .md-img{
-  max-width: 75%;
+  img {
+    max-width: 75%;
+  }
+  .sub-text{
+    width: 75%;
+  }
 }
 .lg-img{
-  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
+  .sub-text{
+    width: 100%;
+  }
 }

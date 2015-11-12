@@ -555,6 +555,9 @@ hr {
       padding: .5rem 0;
       font-size: 15px;
       font-weight: 600; }
+.blog-wrapper .blog-post .small-text {
+  font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif !important;
+  color: black; }
 .blog-wrapper .blog-post .content {
   font-family: "GothamXLight",'Helvetica Neue',Arial,sans-serif; }
   .blog-wrapper .blog-post .content .content-heading {
@@ -613,13 +616,24 @@ hr {
 .font-weight-600 {
   font-weight: 600 !important; }
 
-.sm-img {
+.xs-img img {
+  max-width: 25%; }
+.xs-img .sub-text {
+  width: 25%; }
+
+.sm-img img {
   max-width: 40%; }
+.sm-img .sub-text {
+  width: 40%; }
 
-.md-img {
+.md-img img {
   max-width: 75%; }
+.md-img .sub-text {
+  width: 75%; }
 
-.lg-img {
+.lg-img img {
   max-width: 100%; }
+.lg-img .sub-text {
+  width: 100%; }
 
 /*# sourceMappingURL=creative.css.map */
