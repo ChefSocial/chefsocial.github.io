@@ -107,28 +107,28 @@
         });
     });
 
-    var page=1;
-    $('#blog-link').on('click', function(){
-        page=2;
-        $('#mainNav .navbar-brand').addClass('page2-bg');
-        $('.navbar-right').hide();
-        $('#page1').fadeOut('slow', function(){
-            $('#page2').toggleClass('hide show');
-            $('#page2').fadeIn('slow');
-        });
-    });
+    // var page=1;
+    // $('#blog-link').on('click', function(){
+    //     page=2;
+    //     $('#mainNav .navbar-brand').addClass('page2-bg');
+    //     $('.navbar-right').hide();
+    //     $('#page1').fadeOut('slow', function(){
+    //         $('#page2').toggleClass('hide show');
+    //         $('#page2').fadeIn('slow');
+    //     });
+    // });
 
-    $('.navbar-brand').on('click', function(){
-        if(page==2){
-            page=1;
-            $('#mainNav .navbar-brand').removeClass('page2-bg');
-            $('.navbar-right').show();
-            $('#page2').fadeOut('slow', function(){
-            $('#page2').toggleClass('hide show');
-            $('#page1').show().fadeIn('slow');
-        });
-        }
-    });
+    // $('.navbar-brand').on('click', function(){
+    //     if(page==2){
+    //         page=1;
+    //         $('#mainNav .navbar-brand').removeClass('page2-bg');
+    //         $('.navbar-right').show();
+    //         $('#page2').fadeOut('slow', function(){
+    //         $('#page2').toggleClass('hide show');
+    //         $('#page1').show().fadeIn('slow');
+    //     });
+    //     }
+    // });
 
 
     // JS to make the menu modal full screen
