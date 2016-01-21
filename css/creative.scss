@@ -186,13 +186,16 @@ aside {
     border-color: rgba(255, 255, 255, 0.3);
     background-color: transparent;
     .navbar-header .navbar-brand {
-      color: rgba(255, 255, 255, 0.7);
+      color: white;
+      font-weight: 900;
+      font-family: "ProximaNova";
       &:hover, &:focus {
         color: #fff;
       }
     }
     .nav > li > a {
-      color: rgba(255, 255, 255, 0.7);
+      color: white;
+      font-family: "ProximaNova";
       &:focus {
         color: rgba(255, 255, 255, 0.7);
       }
@@ -230,7 +233,7 @@ header {
   text-align: center;
   color: #fff;
   /*background: url(../img/cover1.jpg) no-repeat center center fixed;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover1.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover3.jpg) no-repeat center center fixed;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -247,6 +250,7 @@ header {
         margin-bottom: 0;
         text-transform: uppercase;
         font-weight: 700;
+        font-size: 48px !important;
       }
       hr {
         margin: 30px auto;
@@ -638,9 +642,12 @@ body {
       background-color: transparent;
     }
     &[type="submit"]{
-        color: white;
-        background-color: $food-red;
-        border: 1px solid $food-red;
+      color: white;
+      background-color: $food-red;
+      border: 1px solid $food-red;
+      font-family: "ProximaNova";
+      font-weight: 900;
+      letter-spacing: 1px;
     }
   }
 }

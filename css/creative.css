@@ -131,11 +131,14 @@ aside {
     border-color: rgba(255, 255, 255, 0.3);
     background-color: transparent; }
     .navbar-default .navbar-header .navbar-brand {
-      color: rgba(255, 255, 255, 0.7); }
+      color: white;
+      font-weight: 900;
+      font-family: "ProximaNova"; }
       .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
         color: #fff; }
     .navbar-default .nav > li > a {
-      color: rgba(255, 255, 255, 0.7); }
+      color: white;
+      font-family: "ProximaNova"; }
       .navbar-default .nav > li > a:focus {
         color: rgba(255, 255, 255, 0.7); }
       .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
@@ -161,7 +164,7 @@ header {
   text-align: center;
   color: #fff;
   /*background: url(../img/cover1.jpg) no-repeat center center fixed;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover2.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover3.jpg) no-repeat center center fixed;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -176,7 +179,8 @@ header {
       margin-top: 0;
       margin-bottom: 0;
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 700;
+      font-size: 48px !important; }
     header .header-content .header-content-inner hr {
       margin: 30px auto; }
     header .header-content .header-content-inner p {
@@ -461,7 +465,10 @@ body {
   .subscription-form input[type="submit"] {
     color: white;
     background-color: #EC6862;
-    border: 1px solid #EC6862; }
+    border: 1px solid #EC6862;
+    font-family: "ProximaNova";
+    font-weight: 900;
+    letter-spacing: 1px; }
 
 .call-to-action {
   min-height: 11rem; }
