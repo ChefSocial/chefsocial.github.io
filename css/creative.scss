@@ -701,6 +701,7 @@ hr {
       }
       .name{
         font-size: 2.5rem;
+        font-family: "GothamMedium";
       }
       .description{
         font-size: 2rem;
@@ -712,11 +713,13 @@ hr {
         a{
           color: white;
           text-decoration: none;
+          font-family: "ProximaNova";
         }
       }
       .menu-btn-inverted{
         color: $food-red;
         border: 1px solid $food-red;
+        font-family: "ProximaNova";
       }
     }
 }
