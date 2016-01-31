@@ -691,8 +691,17 @@ hr {
 .profile-section{
     /*padding: 80px 0;*/
     .profile-row{
+      min-height: 500px;
+      .chef-profile-image {
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        height: 100%;
+        background-position: center !important;
+        background-size: cover !important;
+      }
       .image-col{
-        height: 40rem;
+        height: 50rem;
         overflow: hidden;
       }
       .name, .description{
