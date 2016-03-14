@@ -58,79 +58,6 @@
         });
     });
 
-    // $('#myCarousel').carousel({
-    //   interval: 40000000000
-    // })
-
-    // $('.carousel .item').each(function(){
-    //   var next = $(this).next();
-    //   if (!next.length) {
-    //     next = $(this).siblings(':first');
-    //   }
-    //   next.children(':first-child').clone().appendTo($(this));
-    //   console.log("below...");
-    //   console.log($(this));
-      
-    //   // for (var i = 0; i < 3; i++) {
-    //   //     next = next.next();
-    //   //     if(!next.length){
-    //   //       next = $(this).siblings(':first');
-    //   //     }
-    //   //     next.children(':first-child').clone.appendTo($(this));
-    //   // };
-
-    //   if (next.next().length>0) {
-    //     next.next().children(':first-child').clone().appendTo($(this));
-    //   }
-    //   else {
-    //     $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    //   }
-    // });
-
-    $(document).ready(function () {
-        $('#myCarousel').carousel({
-            interval: 10000
-        })
-        $('.fdi-Carousel .item').each(function () {
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-
-            if (next.next().length > 0) {
-                next.next().children(':first-child').clone().appendTo($(this));
-            }
-            else {
-                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-            }
-        });
-    });
-
-    // var page=1;
-    // $('#blog-link').on('click', function(){
-    //     page=2;
-    //     $('#mainNav .navbar-brand').addClass('page2-bg');
-    //     $('.navbar-right').hide();
-    //     $('#page1').fadeOut('slow', function(){
-    //         $('#page2').toggleClass('hide show');
-    //         $('#page2').fadeIn('slow');
-    //     });
-    // });
-
-    // $('.navbar-brand').on('click', function(){
-    //     if(page==2){
-    //         page=1;
-    //         $('#mainNav .navbar-brand').removeClass('page2-bg');
-    //         $('.navbar-right').show();
-    //         $('#page2').fadeOut('slow', function(){
-    //         $('#page2').toggleClass('hide show');
-    //         $('#page1').show().fadeIn('slow');
-    //     });
-    //     }
-    // });
-
-
     // JS to make the menu modal full screen
     $(".modal-transparent").on('show.bs.modal', function () {
       setTimeout( function() {
@@ -151,7 +78,7 @@
     });
 
     $('#carousel-example-generic').carousel({
-        interval: 300000
+        interval: 10000
     });
 
 })(jQuery); // End of use strict
