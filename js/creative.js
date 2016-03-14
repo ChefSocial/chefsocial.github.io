@@ -77,8 +77,8 @@
       $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
     });
 
-    $('#carousel-example-generic').carousel({
-        interval: 10000
-    });
+    // $('#carousel-example-generic').carousel({
+    //     interval: 10000
+    // });
 
 })(jQuery); // End of use strict

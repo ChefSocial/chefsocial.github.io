@@ -554,12 +554,12 @@ hr {
       width: 800px;
   } 
 }*/
-#carousel-example-generic img {
+#sherCarousel img, #tabrezCarousel img, #honeyCarousel img {
   height: 600px;
   margin: auto; }
-#carousel-example-generic .carousel-control {
+#sherCarousel .carousel-control, #tabrezCarousel .carousel-control, #honeyCarousel .carousel-control {
   background: none; }
-  #carousel-example-generic .carousel-control .icon {
+  #sherCarousel .carousel-control .icon, #tabrezCarousel .carousel-control .icon, #honeyCarousel .carousel-control .icon {
     width: 30px;
     height: 30px;
     margin-top: -15px;
@@ -570,9 +570,9 @@ hr {
     z-index: 5;
     display: inline-block;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-#carousel-example-generic .carousel-indicators .active {
+#sherCarousel .carousel-indicators .active, #tabrezCarousel .carousel-indicators .active, #honeyCarousel .carousel-indicators .active {
   background-color: rgba(100, 100, 100, 0.7); }
-#carousel-example-generic .carousel-indicators li {
+#sherCarousel .carousel-indicators li, #tabrezCarousel .carousel-indicators li, #honeyCarousel .carousel-indicators li {
   background-color: rgba(213, 213, 213, 0.7); }
 
 .modal-transparent {
