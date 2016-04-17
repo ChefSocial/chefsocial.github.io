@@ -530,6 +530,11 @@ hr {
       border: 1px solid #EC6862;
       font-family: "ProximaNova"; }
 
+/* ================== Testimonial Section CSS ================== */
+#testimonials {
+  background-color: #f5f5f5; }
+
+/* ================== END Testimonial Section CSS ================== */
 /* ================== Menu Modal CSS ================== */
 #modal1 .modal-content {
   border-radius: 0; }
@@ -644,6 +649,33 @@ hr {
   left: -33.33%; }
 
 /* ================== Page2 BLOG CSS ================== */
+.press-wrapper {
+  padding: 7rem 5rem 7rem 5rem; }
+  .press-wrapper p.description {
+    font-size: 2rem;
+    /*font-weight: 600;*/
+    /*font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;*/
+    font-family: KulturistaMedium; }
+  .press-wrapper .first-character {
+    float: left;
+    font-size: 7.5rem;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: Kulturista; }
+  .press-wrapper .press-small {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: .5rem; }
+    .press-wrapper .press-small a {
+      color: #EC6862;
+      text-decoration: none; }
+  .press-wrapper .read-more {
+    color: #EC6862; }
+
+/* ================== <-- END --> Page2 BLOG CSS ================== */
+/* ================== Page2 BLOG CSS ================== */
 .blog-wrapper {
   margin-top: 6rem; }
 
@@ -710,6 +742,9 @@ hr {
 
 .padding-5 {
   padding: 5px; }
+
+.padding-3rem {
+  padding: 3rem !important; }
 
 .padding-left-10 {
   padding-left: 10px !important; }
