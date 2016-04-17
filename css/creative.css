@@ -671,6 +671,14 @@ hr {
     .press-wrapper .press-small a {
       color: #EC6862;
       text-decoration: none; }
+  .press-wrapper .author {
+    font-size: 1.5rem !important;
+    /*padding: .5rem;*/
+    color: #EC6862 !important;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: KulturistaMedium;
+    padding-left: 5.8rem; }
   .press-wrapper .read-more {
     color: #EC6862; }
 
