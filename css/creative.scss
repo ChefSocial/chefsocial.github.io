@@ -733,8 +733,55 @@ hr {
     }
 }
 /* ================== Testimonial Section CSS ================== */
-#testimonials{
+.testimonial-wrapper{
   background-color: #f5f5f5;
+  padding: 5rem;  
+  .description{
+    text-align: center;
+    display: none;
+    p{
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem!important;  
+    }
+  }
+  .image{
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .2;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .active{
+    opacity: 1;
+  }
+  .desc-active{
+    display: block;
+  }
+  #img1{
+    background-image: url('../img/Testimonials/1.jpg');
+  }
+  #img2{
+    background-image: url('../img/Testimonials/2.jpg');
+  }
+  #img3{
+    background-image: url('../img/Testimonials/3.jpg');
+  }
+  #img4{
+    background-image: url('../img/Testimonials/4.jpg');
+  }
+  #img5{
+    background-image: url('../img/Testimonials/5.jpg');
+  }
+  #img6{
+    background-image: url('../img/Testimonials/6.jpg');
+  }
 }
 /* ================== END Testimonial Section CSS ================== */
 

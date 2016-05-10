@@ -531,8 +531,43 @@ hr {
       font-family: "ProximaNova"; }
 
 /* ================== Testimonial Section CSS ================== */
-#testimonials {
-  background-color: #f5f5f5; }
+.testimonial-wrapper {
+  background-color: #f5f5f5;
+  padding: 5rem; }
+  .testimonial-wrapper .description {
+    text-align: center;
+    display: none; }
+    .testimonial-wrapper .description p {
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem !important; }
+  .testimonial-wrapper .image {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .2; }
+    .testimonial-wrapper .image:hover {
+      cursor: pointer; }
+  .testimonial-wrapper .active {
+    opacity: 1; }
+  .testimonial-wrapper .desc-active {
+    display: block; }
+  .testimonial-wrapper #img1 {
+    background-image: url("../img/Testimonials/1.jpg"); }
+  .testimonial-wrapper #img2 {
+    background-image: url("../img/Testimonials/2.jpg"); }
+  .testimonial-wrapper #img3 {
+    background-image: url("../img/Testimonials/3.jpg"); }
+  .testimonial-wrapper #img4 {
+    background-image: url("../img/Testimonials/4.jpg"); }
+  .testimonial-wrapper #img5 {
+    background-image: url("../img/Testimonials/5.jpg"); }
+  .testimonial-wrapper #img6 {
+    background-image: url("../img/Testimonials/6.jpg"); }
 
 /* ================== END Testimonial Section CSS ================== */
 /* ================== Menu Modal CSS ================== */

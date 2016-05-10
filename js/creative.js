@@ -81,4 +81,16 @@
     //     interval: 10000
     // });
 
+    $('.testimonial-wrapper .image').on('click', function(){
+        var imageId = $(this).attr('imageId');
+        // make all other image siblings inactive
+        $('.testimonial-wrapper .image').removeClass('active');
+        // make that image active
+        $('.testimonial-wrapper #img' + imageId).addClass('active');
+        // hide other image description
+        $('.testimonial-wrapper .description').hide();
+        // show that image description
+        $('.testimonial-wrapper #desc' + imageId).fadeIn(2000);   
+    });
+
 })(jQuery); // End of use strict
