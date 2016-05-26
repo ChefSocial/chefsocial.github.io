@@ -733,6 +733,23 @@ hr {
     }
 }
 /* ================== Testimonial Section CSS ================== */
+.chef-registration-wrapper{
+  background-color: #222;
+  color: white;
+  padding: 5rem;  
+  .description{
+    text-align: center;
+    display: none;
+    p{
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem!important;  
+    }
+  }
+}
+/* ================== END Chef Registeration Section CSS ================== */
+
+/* ================== Testimonial Section CSS ================== */
 .testimonial-wrapper{
   background-color: #f5f5f5;
   padding: 5rem;  
