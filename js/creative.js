@@ -93,4 +93,12 @@
         $('.testimonial-wrapper #desc' + imageId).fadeIn(2000);   
     });
 
+    // Closing the menu modal and opening the booking modal
+    $('.close-menu-modal').on('click', function(){
+        $(this).closest('.modal').modal('hide');
+    });
+    $('.goto-menu-modal').on('click', function(){
+        $(this).closest('.modal').modal('hide');
+    });
+
 })(jQuery); // End of use strict

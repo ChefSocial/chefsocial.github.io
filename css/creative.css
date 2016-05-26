@@ -697,7 +697,7 @@ hr {
 .onebyone-carosel .prev {
   left: -33.33%; }
 
-/* ================== Page2 BLOG CSS ================== */
+/* ================== Press Section CSS ================== */
 .press-wrapper {
   padding: 7rem 5rem 7rem 5rem; }
   .press-wrapper p.description {
@@ -731,7 +731,25 @@ hr {
   .press-wrapper .read-more {
     color: #EC6862; }
 
-/* ================== <-- END --> Page2 BLOG CSS ================== */
+/* ================== <-- END --> Press Section CSS ================== */
+/* ================== Menu Modal CSS ================== */
+.menu-modal .carousel-caption {
+  right: -35rem;
+  top: -0.2rem;
+  color: black; }
+.menu-modal .menu-btn-inverted {
+  color: #EC6862;
+  border: 1px solid #EC6862;
+  font-family: "ProximaNova"; }
+
+/* ================== <-- END --> Menu Modal CSS ================== */
+/* ================== Menu Booking Modal CSS ================== */
+.menu-booking-modal .menu-btn-inverted {
+  color: #EC6862;
+  border: 1px solid #EC6862;
+  font-family: "ProximaNova"; }
+
+/* ================== <-- END --> Menu Booking Modal CSS ================== */
 /* ================== Page2 BLOG CSS ================== */
 .blog-wrapper {
   margin-top: 6rem; }
@@ -808,6 +826,9 @@ hr {
 
 .padding-right-10 {
   padding-right: 10px !important; }
+
+.padding-top-15rem {
+  padding-top: 15rem !important; }
 
 .font-weight-600 {
   font-weight: 600 !important; }
