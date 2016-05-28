@@ -101,4 +101,15 @@
         $(this).closest('.modal').modal('hide');
     });
 
+    // Dynamically changing the booked menu image of a chef
+    $('.close-menu-modal').on('click', function(){
+        var chef = $(this).closest('.modal').attr('chef');
+        var menu = $(this).attr('menu');
+        switch(chef){
+            case 'tabrez':
+                $('#'+chef+'BookingModal .menu-image').attr("src", "img/menu/tabrez-booked-menu-"+menu+".jpg");
+                break;
+        };
+    });
+
 })(jQuery); // End of use strict
