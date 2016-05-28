@@ -819,7 +819,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
           </div>
         </div>
 
-        <div class="modal fade modal-fullscreen menu-modal" id="honeyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade modal-fullscreen menu-modal" id="honeyModal" chef="honey" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <!-- <div class="modal-header">
@@ -847,14 +847,14 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                               <img src="img/menu/honey-menu-1.png" alt="">
                               <div class="carousel-caption">
                                 <!-- <h3></h3> -->
-                                <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#honeyBookingModal">Book This Menu</div>
+                                <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#honeyBookingModal" menu="1">Book This Menu</div>
                               </div>
                             </div>
                             <div class="item">
                               <img src="img/menu/honey-menu-2.png" alt="">
                               <div class="carousel-caption">
                                 <!-- <h3></h3> -->
-                                <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#honeyBookingModal">Book This Menu</div>
+                                <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#honeyBookingModal" menu="2">Book This Menu</div>
                               </div>
                             </div>
                           </div>
@@ -894,11 +894,121 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
               </div>
               <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 pull-right right-align">
                         <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#honeyModal">Go Back</div>
                     </div>
                 </div>
-                <h2 class="center-align padding-top-15rem">We Are Aggresively Working On It. You'll Be Able To Book Soon!!</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <h4>Completed steps flow will come here</h4> -->
+                    </div>
+                </div>
+                <div class="row step-1" style="margin-top:4rem;">
+                    <div class="col-md-5 center-align">
+                        <h3 class="font-weight-600">Selected Menu</h3>
+                        <img src="" class="menu-image">
+                    </div> 
+                    <div class="col-md-7 margin-top-2rem">
+                        <div class="main clearfix center-align">
+                            <form id="nl-form" class="nl-form">
+                                I want to book  
+                                <select>
+                                    <option value="1" selected>Chef Honey</option>
+                                </select>
+                                <br />
+                                for
+                                <select>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                </select>
+                                people
+                                <br/>
+                                on 
+                                <select>
+                                    <option value="6" selected>June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                </select>
+                                <select>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                </select>
+                                at 
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8" selected>8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select>
+                                    <option value="1" selected>p.m.</option>
+                                    <option value="2">a.m.</option>
+                                </select>
+                                <!-- <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+                                <div class="nl-submit-wrap">
+                                    <button class="nl-submit" type="submit">Find a restaurant</button>
+                                </div> -->
+                                <div class="nl-overlay"></div>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="col-md-12 pull-right right-align">
+                        <div class="btn btn-default btn-xl menu-btn-inverted">Next</div>
+                    </div>
+                </div>
+                <div class="row step-2">
+                    
+                </div>
+                <div class="row step-3">
+        
+                </div>
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -908,7 +1018,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
           </div>
         </div>
 
-        <div class="modal fade modal-fullscreen menu-modal" id="sherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade modal-fullscreen menu-modal" id="sherModal" chef="sher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <!-- <div class="modal-header">
@@ -935,7 +1045,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                               <img src="img/menu/sher-menu-1.jpg" alt="">
                               <div class="carousel-caption">
                                 <!-- <h3></h3> -->
-                                <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#sherBookingModal">Book This Menu</div>
+                                <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#sherBookingModal" menu="1">Book This Menu</div>
                               </div>
                             </div>
                           </div>
@@ -975,11 +1085,121 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
               </div>
               <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 pull-right right-align">
                         <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#sherModal">Go Back</div>
                     </div>
                 </div>
-                <h2 class="center-align padding-top-15rem">We Are Aggresively Working On It. You'll Be Able To Book Soon!!</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <h4>Completed steps flow will come here</h4> -->
+                    </div>
+                </div>
+                <div class="row step-1" style="margin-top:4rem;">
+                    <div class="col-md-5 center-align">
+                        <h3 class="font-weight-600">Selected Menu</h3>
+                        <img src="" class="menu-image">
+                    </div> 
+                    <div class="col-md-7 margin-top-2rem">
+                        <div class="main clearfix center-align">
+                            <form id="nl-form" class="nl-form">
+                                I want to book  
+                                <select>
+                                    <option value="1" selected>Chef Sher</option>
+                                </select>
+                                <br />
+                                for
+                                <select>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                </select>
+                                people
+                                <br/>
+                                on 
+                                <select>
+                                    <option value="6" selected>June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                </select>
+                                <select>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                </select>
+                                at 
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8" selected>8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select>
+                                    <option value="1" selected>p.m.</option>
+                                    <option value="2">a.m.</option>
+                                </select>
+                                <!-- <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+                                <div class="nl-submit-wrap">
+                                    <button class="nl-submit" type="submit">Find a restaurant</button>
+                                </div> -->
+                                <div class="nl-overlay"></div>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="col-md-12 pull-right right-align">
+                        <div class="btn btn-default btn-xl menu-btn-inverted">Next</div>
+                    </div>
+                </div>
+                <div class="row step-2">
+                    
+                </div>
+                <div class="row step-3">
+        
+                </div>
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -1262,8 +1482,10 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
 
     <!-- Natural Language Form JavaScript -->
     <script src="js/nlform.js"></script>
-    <script>
-        var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    <script type="text/javascript">
+        var nlform1 = new NLForm( $("#tabrezBookingModal .nl-form").get(0) );
+        var nlform2 = new NLForm( $("#honeyBookingModal .nl-form").get(0) );
+        var nlform3 = new NLForm( $("#sherBookingModal .nl-form").get(0) );
     </script>
     
     <!-- pushcape integration -->

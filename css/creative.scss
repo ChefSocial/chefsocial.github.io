@@ -1044,20 +1044,22 @@ hr {
   {
     background: #478982;
   }
-  /* === Overriding NL Language Form Css ==== */
-  .nl-form{
-    font-size: 3.5rem!important;
-    .nl-field-toggle, .nl-form input, .nl-form select{
-      color: #EC6862;
-      border-color: #EC6862;
-    }
-    ul{
-      overflow-y: scroll;
-      max-height: 60rem;
-    }
-  }
 }
 /* ================== <-- END --> Menu Booking Modal CSS ================== */
+
+/* === Overriding NL Language Form Css ==== */
+.nl-form{
+  font-size: 3.5rem!important;
+  .nl-field-toggle, .nl-form input, .nl-form select{
+    color: #EC6862!important;
+    border-color: #EC6862!important;
+  }
+  ul{
+    overflow-y: scroll;
+    max-height: 60rem;
+  }
+}
+/* === <-- END --> Overriding NL Language Form Css ==== */
 
 /* ================== Page2 BLOG CSS ================== */
 .blog-wrapper{

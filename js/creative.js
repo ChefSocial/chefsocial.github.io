@@ -105,11 +105,7 @@
     $('.close-menu-modal').on('click', function(){
         var chef = $(this).closest('.modal').attr('chef');
         var menu = $(this).attr('menu');
-        switch(chef){
-            case 'tabrez':
-                $('#'+chef+'BookingModal .menu-image').attr("src", "img/menu/tabrez-booked-menu-"+menu+".jpg");
-                break;
-        };
+        $('#'+chef+'BookingModal .menu-image').attr("src", "img/menu/"+chef+"-booked-menu-"+menu+".jpg");
     });
 
 })(jQuery); // End of use strict

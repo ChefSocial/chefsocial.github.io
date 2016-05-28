@@ -744,40 +744,41 @@ hr {
 
 /* ================== <-- END --> Menu Modal CSS ================== */
 /* ================== Menu Booking Modal CSS ================== */
-.menu-booking-modal {
-  /* === Overriding NL Language Form Css ==== */ }
-  .menu-booking-modal .menu-btn-inverted {
-    color: #EC6862;
-    border: 1px solid #EC6862;
-    font-family: "ProximaNova"; }
-  .menu-booking-modal .modal-dialog {
-    width: 100%;
-    height: 100%;
-    padding: 0 13.5rem; }
-    .menu-booking-modal .modal-dialog .modal-body .main {
-      padding: 6rem 4rem;
-      border: 1px solid #ddd; }
-    .menu-booking-modal .modal-dialog .menu-image {
-      height: 30rem; }
-  .menu-booking-modal ::-webkit-scrollbar {
-    width: 12px;
-    /* for vertical scrollbars */
-    height: 12px;
-    /* for horizontal scrollbars */ }
-  .menu-booking-modal ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); }
-  .menu-booking-modal ::-webkit-scrollbar-thumb {
-    background: #478982; }
-  .menu-booking-modal .nl-form {
-    font-size: 3.5rem !important; }
-    .menu-booking-modal .nl-form .nl-field-toggle, .menu-booking-modal .nl-form .nl-form input, .menu-booking-modal .nl-form .nl-form select {
-      color: #EC6862;
-      border-color: #EC6862; }
-    .menu-booking-modal .nl-form ul {
-      overflow-y: scroll;
-      max-height: 60rem; }
+.menu-booking-modal .menu-btn-inverted {
+  color: #EC6862;
+  border: 1px solid #EC6862;
+  font-family: "ProximaNova"; }
+.menu-booking-modal .modal-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0 13.5rem; }
+  .menu-booking-modal .modal-dialog .modal-body .main {
+    padding: 6rem 4rem;
+    border: 1px solid #ddd; }
+  .menu-booking-modal .modal-dialog .menu-image {
+    height: 30rem; }
+.menu-booking-modal ::-webkit-scrollbar {
+  width: 12px;
+  /* for vertical scrollbars */
+  height: 12px;
+  /* for horizontal scrollbars */ }
+.menu-booking-modal ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); }
+.menu-booking-modal ::-webkit-scrollbar-thumb {
+  background: #478982; }
 
 /* ================== <-- END --> Menu Booking Modal CSS ================== */
+/* === Overriding NL Language Form Css ==== */
+.nl-form {
+  font-size: 3.5rem !important; }
+  .nl-form .nl-field-toggle, .nl-form .nl-form input, .nl-form .nl-form select {
+    color: #EC6862 !important;
+    border-color: #EC6862 !important; }
+  .nl-form ul {
+    overflow-y: scroll;
+    max-height: 60rem; }
+
+/* === <-- END --> Overriding NL Language Form Css ==== */
 /* ================== Page2 BLOG CSS ================== */
 .blog-wrapper {
   margin-top: 6rem; }
