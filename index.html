@@ -19,6 +19,9 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
+    <!-- Animate Library CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -696,7 +699,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
               <div class="modal-body">
                 <div class="row">
                     <div class="col-md-4 pull-right right-align">
-                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#tabrezModal">Go Back</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#tabrezModal">See Menus</div>
                     </div>
                 </div>
                 <div class="row">
@@ -704,7 +707,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                         <!-- <h4>Completed steps flow will come here</h4> -->
                     </div>
                 </div>
-                <div class="row step-1" style="margin-top:4rem;">
+                <div class="row step" step="1" style="margin-top:4rem;">
                     <div class="col-md-5 center-align">
                         <h3 class="font-weight-600">Selected Menu</h3>
                         <img src="" class="menu-image">
@@ -801,15 +804,63 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                         </div>
                     </div> 
                     <div class="col-md-12 pull-right right-align">
-                        <div class="btn btn-default btn-xl menu-btn-inverted">Next</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
                     </div>
                 </div>
-                <div class="row step-2">
-                    
+                <div class="row step" step="2">
+                    <div class="col-md-8 col-md-offset-2 font-weight-600">
+                        <h2>Address:</h2>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="signUp-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Flat/Apartment</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Flat No.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Street</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Street">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>City</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Postal Code</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Postal Code">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 right-align padding-right35px">
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
+                    </div>
                 </div>
-                <div class="row step-3">
-        
+                <div class="row step" step="3">
+                    <div class="col-md-12">
+                        <h2>Summary:</h2>
+                    </div>
+                    <div class="col-md-12 pull-right right-align">
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                    </div>
                 </div>
+              </div>
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -895,7 +946,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
               <div class="modal-body">
                 <div class="row">
                     <div class="col-md-4 pull-right right-align">
-                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#honeyModal">Go Back</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#honeyModal">See Menus</div>
                     </div>
                 </div>
                 <div class="row">
@@ -903,7 +954,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                         <!-- <h4>Completed steps flow will come here</h4> -->
                     </div>
                 </div>
-                <div class="row step-1" style="margin-top:4rem;">
+                <div class="row step" step="1" style="margin-top:4rem;">
                     <div class="col-md-5 center-align">
                         <h3 class="font-weight-600">Selected Menu</h3>
                         <img src="" class="menu-image">
@@ -1000,14 +1051,61 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                         </div>
                     </div> 
                     <div class="col-md-12 pull-right right-align">
-                        <div class="btn btn-default btn-xl menu-btn-inverted">Next</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
                     </div>
                 </div>
-                <div class="row step-2">
-                    
+                <div class="row step" step="2">
+                    <div class="col-md-8 col-md-offset-2 font-weight-600">
+                        <h2>Address:</h2>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="signUp-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Flat/Apartment</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Flat No.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Street</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Street">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>City</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Postal Code</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Postal Code">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 right-align padding-right35px">
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
+                    </div>
                 </div>
-                <div class="row step-3">
-        
+                <div class="row step" step="3">
+                    <div class="col-md-12">
+                        <h2>Summary:</h2>
+                    </div>
+                    <div class="col-md-12 pull-right right-align">
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                    </div>
                 </div>
               </div>
               <!-- <div class="modal-footer">
@@ -1086,7 +1184,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
               <div class="modal-body">
                 <div class="row">
                     <div class="col-md-4 pull-right right-align">
-                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#sherModal">Go Back</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#sherModal">See Menus</div>
                     </div>
                 </div>
                 <div class="row">
@@ -1094,7 +1192,7 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                         <!-- <h4>Completed steps flow will come here</h4> -->
                     </div>
                 </div>
-                <div class="row step-1" style="margin-top:4rem;">
+                <div class="row step" step="1" style="margin-top:4rem;">
                     <div class="col-md-5 center-align">
                         <h3 class="font-weight-600">Selected Menu</h3>
                         <img src="" class="menu-image">
@@ -1191,14 +1289,61 @@ Having worked with the infamous Chef Gordon Ramsay at his restaurant Maze in Mel
                         </div>
                     </div> 
                     <div class="col-md-12 pull-right right-align">
-                        <div class="btn btn-default btn-xl menu-btn-inverted">Next</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
                     </div>
                 </div>
-                <div class="row step-2">
-                    
+                <div class="row step" step="2">
+                    <div class="col-md-8 col-md-offset-2 font-weight-600">
+                        <h2>Address:</h2>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="signUp-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Flat/Apartment</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Flat No.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Street</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Street">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>City</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Postal Code</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" aria-label="" placeholder="Postal Code">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 right-align padding-right35px">
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
+                    </div>
                 </div>
-                <div class="row step-3">
-        
+                <div class="row step" step="3">
+                    <div class="col-md-12">
+                        <h2>Summary:</h2>
+                    </div>
+                    <div class="col-md-12 pull-right right-align">
+                        <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                    </div>
                 </div>
               </div>
               <!-- <div class="modal-footer">
