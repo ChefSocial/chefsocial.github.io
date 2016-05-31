@@ -757,14 +757,14 @@ hr {
     border: 1px solid #ddd; }
   .menu-booking-modal .modal-dialog .menu-image {
     height: 30rem; }
-.menu-booking-modal .step .signUp-form {
+.menu-booking-modal .step .address-form {
   padding: 2rem; }
-  .menu-booking-modal .step .signUp-form input {
+  .menu-booking-modal .step .address-form input {
     width: 100%;
     height: 4rem;
     margin-bottom: 2rem;
     border-radius: 0; }
-  .menu-booking-modal .step .signUp-form label {
+  .menu-booking-modal .step .address-form label {
     font-weight: 200;
     padding: 1rem 0; }
 .menu-booking-modal ::-webkit-scrollbar {

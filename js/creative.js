@@ -103,8 +103,11 @@
 
     // Dynamically changing the booked menu image of a chef
     $('.close-menu-modal').on('click', function(){
+        // Resetting the booking data to when opening the booking flow - step 1
+        bookingData = {};
         var chef = $(this).closest('.modal').attr('chef');
         var menu = $(this).attr('menu');
+        bookingData["booked_chef"] = chef;
         // Show step-1 and Hide the step 2 and 3 of the booking modal by default
         $('#' + chef + 'BookingModal .step[step="1"]').show();
         $('#' + chef + 'BookingModal .step[step="2"], #' + chef + 'BookingModal .step[step="3"]').hide();
@@ -123,11 +126,40 @@
         }else{
             var futureStepNumber = parseInt(currentStepNumber) - 1;
         }
+        switch(currentStepNumber){
+            case "1":
+                captureStep1Data();
+                break;
+            case "2":
+                captureStep2Data();
+                break;
+        };
         // show future step with animation + hide current step with animation
         var futureStep = currentStep.siblings(".step[step='" +  futureStepNumber + "']");
         currentStep.fadeOut(250, function(){
             futureStep.fadeIn(250);
         });
     });
+
+    // Capturing User Entered Data
+    var bookingData = {};
+    var captureStep1Data = function (){
+        bookingData["number_of_people"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="number_of_people"]').find(':selected').val();
+        bookingData["month"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="month"]').find(':selected').val();
+        bookingData["date"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="date"]').find(':selected').val();
+        bookingData["hour"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="hour"]').find(':selected').val();
+        bookingData["time"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="time"]').find(':selected').val();
+        console.log(bookingData);
+    };
+    var captureStep2Data = function (){
+        bookingData["phone_number"] = $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="phone_number"]').val();
+        bookingData["customer_name"] = $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="name"]').val();        
+        bookingData["address"] = {
+            "address": $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="address"]').val(),
+            "city": $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="city"]').val(),
+            "postal_code": $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="postal_code"]').val()
+        };
+        console.log(bookingData);
+    };
 
 })(jQuery); // End of use strict
