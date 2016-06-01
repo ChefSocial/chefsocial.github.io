@@ -33,6 +33,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     <link rel="stylesheet" href="css/bookingFlow.css" type="text/css">
+    <link rel="stylesheet" href="css/booking.css" type="text/css">
 
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 
@@ -441,7 +442,7 @@
                         </p>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="btn btn-default btn-xl menu-btn-inverted" data-toggle="modal" data-target="#honeyModal">View Menu</div>
+                                <div class="btn btn-default btn-xl menu-btn-inverted" data-toggle="modal" data-target="#honeyBookingModal">View Menu</div>
                                 <div class="btn btn-default btn-xl menu-btn">
                                     <a href="mailto:hello@chef.social?subject=Book Chef Honey for <date here> from <time here>&body=Hi ChefSocial,%0A%0A I would like to book Chef Honey, for the menu <menu name here> for <number of people here> people.%0A%0AAddress: <Address here>%0APhone: <Phone number here>%0A%0AThanks,%0A-<Your name here>">Book Chef</a>
                                 </div>
@@ -850,13 +851,9 @@
       </div>
     </div>
 
-    <div class="modal fade modal-fullscreen menu-modal" id="honeyModal" chef="honey" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- <div class="modal fade modal-fullscreen menu-modal" id="honeyModal" chef="honey" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <!-- <div class="modal-header">
-
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div> -->
           <div class="row">
             <div class="col-md-12">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="position:relative;right:-12rem;top:2rem;font-size:4rem;">X</span></button>
@@ -866,31 +863,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="honeyCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-                      <!-- Indicators -->
                       <ol class="carousel-indicators">
                         <li data-target="#honeyCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#honeyCarousel" data-slide-to="1"></li>
                       </ol>
 
-                      <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
                         <div class="item active">
                           <img src="img/menu/honey-menu-1.png" alt="">
                           <div class="carousel-caption">
-                            <!-- <h3></h3> -->
                             <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#honeyBookingModal" menu="1">Book This Menu</div>
                           </div>
                         </div>
                         <div class="item">
                           <img src="img/menu/honey-menu-2.png" alt="">
                           <div class="carousel-caption">
-                            <!-- <h3></h3> -->
                             <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#honeyBookingModal" menu="2">Book This Menu</div>
                           </div>
                         </div>
                       </div>
 
-                      <!-- Controls -->
                       <a class="left carousel-control" href="#honeyCarousel" role="button" data-slide="prev">
                         <span class="icon fa fa-angle-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -903,13 +895,10 @@
                 </div>
             </div>
           </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
-    </div>
+    </div> -->
+    <div booking booked-chef="honey"></div>
 
    <!--  <div class="modal fade modal-fullscreen menu-booking-modal" id="honeyBookingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -1101,7 +1090,7 @@
         </div>
       </div>
     </div> -->
-    <div booking-flow booked-chef="honey"></div>
+    <div booking-flow booked-chef="honey" chef-display-name="Chef Honey"></div>
 
     <div class="modal fade modal-fullscreen menu-modal" id="sherModal" chef="sher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -1614,6 +1603,7 @@
     <script src="js/main.js"></script>
     <!-- Including directives JS -->
     <script src="common/bookingFlow/bookingFlow.js"></script>
+    <script src="common/booking/booking.js"></script>
     <script type="text/javascript">
         var nlform1 = new NLForm( $("#tabrezBookingModal .nl-form").get(0) );
         var nlform3 = new NLForm( $("#sherBookingModal .nl-form").get(0) );
