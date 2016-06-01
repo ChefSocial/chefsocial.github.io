@@ -48,7 +48,7 @@
 
 </head>
 
-<body>
+<body ng-app="chefSocialApp">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -1617,6 +1617,8 @@
     <script src="js/nlform.js"></script>
     <!-- Adding angularJS -->
     <script src="js/angular.min.js"></script>
+    <!-- Including main.js -> it contains angular related JS -->
+    <script src="js/main.js"></script>
     <script type="text/javascript">
         var nlform1 = new NLForm( $("#tabrezBookingModal .nl-form").get(0) );
         var nlform2 = new NLForm( $("#honeyBookingModal .nl-form").get(0) );
