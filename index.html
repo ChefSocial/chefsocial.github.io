@@ -32,6 +32,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="css/bookingFlow.css" type="text/css">
 
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 
@@ -910,13 +911,9 @@
       </div>
     </div>
 
-    <div class="modal fade modal-fullscreen menu-booking-modal" id="honeyBookingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <!--  <div class="modal fade modal-fullscreen menu-booking-modal" id="honeyBookingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <!-- <div class="modal-header">
-
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div> -->
           <div class="row">
             <div class="col-md-12">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="position:relative;right:-12rem;top:2rem;font-size:4rem;">X</span></button>
@@ -926,11 +923,6 @@
             <div class="row">
                 <div class="col-md-4 pull-right right-align">
                     <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#honeyModal">See Menus</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- <h4>Completed steps flow will come here</h4> -->
                 </div>
             </div>
             <div class="row step" step="1" style="margin-top:4rem;">
@@ -1021,10 +1013,6 @@
                                 <option value="pm" selected>p.m.</option>
                                 <option value="am">a.m.</option>
                             </select>
-                            <!-- <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
-                            <div class="nl-submit-wrap">
-                                <button class="nl-submit" type="submit">Find a restaurant</button>
-                            </div> -->
                             <div class="nl-overlay"></div>
                         </form>
                     </div>
@@ -1110,13 +1098,10 @@
                 </div>
             </div>
           </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
-    </div>
+    </div> -->
+    <div booking-flow></div>
 
     <div class="modal fade modal-fullscreen menu-modal" id="sherModal" chef="sher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -1631,7 +1616,6 @@
     <script src="common/bookingFlow/bookingFlow.js"></script>
     <script type="text/javascript">
         var nlform1 = new NLForm( $("#tabrezBookingModal .nl-form").get(0) );
-        var nlform2 = new NLForm( $("#honeyBookingModal .nl-form").get(0) );
         var nlform3 = new NLForm( $("#sherBookingModal .nl-form").get(0) );
     </script>
     <!-- pushcape integration -->
