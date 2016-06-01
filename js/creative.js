@@ -130,9 +130,6 @@
             case "1":
                 captureStep1Data();
                 break;
-            case "2":
-                captureStep2Data();
-                break;
         };
         // show future step with animation + hide current step with animation
         var futureStep = currentStep.siblings(".step[step='" +  futureStepNumber + "']");
@@ -149,16 +146,6 @@
         bookingData["date"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="date"]').find(':selected').val();
         bookingData["hour"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="hour"]').find(':selected').val();
         bookingData["time"] = $('#'+ bookingData["booked_chef"] +'BookingModal select[name="time"]').find(':selected').val();
-        console.log(bookingData);
-    };
-    var captureStep2Data = function (){
-        bookingData["phone_number"] = $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="phone_number"]').val();
-        bookingData["customer_name"] = $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="name"]').val();        
-        bookingData["address"] = {
-            "address": $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="address"]').val(),
-            "city": $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="city"]').val(),
-            "postal_code": $('#'+ bookingData["booked_chef"] +'BookingModal .address-form input[name="postal_code"]').val()
-        };
         console.log(bookingData);
     };
 

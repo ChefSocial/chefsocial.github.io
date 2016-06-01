@@ -1044,7 +1044,7 @@
                                 <label>Name</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="name" aria-label="" placeholder="Name">
+                                <input type="text" class="form-control" name="name" aria-label="" placeholder="Name" ng-model="honeyBooking.name">
                             </div>
                         </div>
                         <div class="row">
@@ -1052,7 +1052,7 @@
                                 <label>Phone no.</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="number" class="form-control" name="phone_number" aria-label="" placeholder="Phone Number">
+                                <input type="number" class="form-control" name="phone_number" aria-label="" placeholder="Phone Number" ng-model="honeyBooking.phone_number">
                             </div>
                         </div>
                         <div class="row">
@@ -1060,7 +1060,7 @@
                                 <label>Address</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="address" aria-label="" placeholder="Flat No., Street">
+                                <input type="text" class="form-control" name="address" aria-label="" placeholder="Flat No., Street" ng-model="honeyBooking.address">
                             </div>
                         </div>
                         <div class="row">
@@ -1068,7 +1068,7 @@
                                 <label>City</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="city" aria-label="" placeholder="City">
+                                <input type="text" class="form-control" name="city" aria-label="" placeholder="City" ng-model="honeyBooking.city">
                             </div>
                         </div>
                         <div class="row">
@@ -1076,7 +1076,7 @@
                                 <label>Postal Code</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="postal_code" aria-label="" placeholder="Postal Code">
+                                <input type="text" class="form-control" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="honeyBooking.postal_code">
                             </div>
                         </div> 
                     </div>
@@ -1090,10 +1090,18 @@
                 <div class="col-md-12">
                     <h2>Summary:</h2>
                 </div>
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4>Hi Rachit, thanks for booking Chef Honey to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h4>
+                            <h3>Hi {{ honeyBooking.name }}, thanks for booking Chef Honey to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            
+                        </div>
+                        <div class="col-md-7">
+                            
                         </div>
                     </div>
                 </div>
@@ -1619,6 +1627,8 @@
     <script src="js/angular.min.js"></script>
     <!-- Including main.js -> it contains angular related JS -->
     <script src="js/main.js"></script>
+    <!-- Including directives JS -->
+    <script src="common/bookingFlow/bookingFlow.js"></script>
     <script type="text/javascript">
         var nlform1 = new NLForm( $("#tabrezBookingModal .nl-form").get(0) );
         var nlform2 = new NLForm( $("#honeyBookingModal .nl-form").get(0) );
