@@ -6,9 +6,29 @@
             return {
                 templateUrl: 'common/chefProfile/chefProfile.html',
                 scope: {
-                    
+                    chefName: '@'
                 },
                 controller: ['$rootScope', '$scope', '$timeout',function ($rootScope, $scope, $timeout){
+
+                    var init = function (){
+                        $scope.data = {
+                            'honey': {
+                                'name': 'honey',
+                                'displayName': 'Chef Honey'
+                            },
+                            'tabrez': {
+                                'name': 'tabrez',
+                                'displayName': 'Chef Tabrez'
+                            },
+                            'sher': {
+                                'name': 'sher',
+                                'displayName': 'Chef Sher'
+                            }
+                        };
+                    };
+                    init();
+                    
+                    $scope.chef = $scope.data[$scope.chefName];
 
                     // JS to make the menu modal full screen
                     $(".modal-transparent").on('show.bs.modal', function () {
