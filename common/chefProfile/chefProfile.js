@@ -1,25 +1,17 @@
 (function (angular) {
-	'use strict';
+    'use strict';
 
-	angular.module('chefSocialApp')
-		.directive('booking', function (){
-			return {
-				templateUrl: 'common/booking/booking.html',
-				scope: {
-					bookedChef: '@',
-					numberOfMenus: '@'
-				},
-				controller: ['$rootScope', '$scope', '$timeout',function ($rootScope, $scope, $timeout){
+    angular.module('chefSocialApp')
+        .directive('chefProfile', function (){
+            return {
+                templateUrl: 'common/chefProfile/chefProfile.html',
+                scope: {
+                    
+                },
+                controller: ['$rootScope', '$scope', '$timeout',function ($rootScope, $scope, $timeout){
 
-					
-
-					// Closing the booking modal
-				    $('.close-menu-modal').on('click', function(){
-				        $(this).closest('.modal').modal('hide');
-				    });
-
-				    // JS to make the menu modal full screen
-				    $(".modal-transparent").on('show.bs.modal', function () {
+                    // JS to make the menu modal full screen
+                    $(".modal-transparent").on('show.bs.modal', function () {
                       setTimeout( function() {
                         $(".modal-backdrop").addClass("modal-backdrop-transparent");
                       }, 0);
@@ -34,9 +26,9 @@
                     });
                     $(".modal-fullscreen").on('hidden.bs.modal', function () {
                       $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-                    });
+                    });                   
 
-				}]
-			};
-		});
+                }]
+            };
+        });
 })(window.angular);

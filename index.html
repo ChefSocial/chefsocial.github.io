@@ -32,8 +32,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
-    <link rel="stylesheet" href="css/bookingFlow.css" type="text/css">
+    <link rel="stylesheet" href="css/chefProfile.css" type="text/css">
     <link rel="stylesheet" href="css/booking.css" type="text/css">
+    <link rel="stylesheet" href="css/bookingFlow.css" type="text/css">
 
     <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 
@@ -431,7 +432,7 @@
                         <div class="chef-profile-image" style="background: url('img/chefs/smriti-k.jpg') no-repeat;"></div>
                     </div>
                 </div>
-                <div class="row profile-row">
+                <!-- <div class="row profile-row">
                     <div class="col-md-6 col-sm-12 padding-0 image-col">
                         <div class="chef-profile-image" style="background: url('img/chefs/chef-honey-islam.jpg') no-repeat;"></div>
                     </div>
@@ -449,15 +450,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="row">
-                    <div class="col-md-6 col-sm-12 padding-0">
-
-                    </div>
-                    <div class="col-md-6 col-sm-12 padding-0">
-                        <img src="img/event/1/chef-tabrez2.jpg" style="width:100%;">
-                    </div>
                 </div> -->
+                <div chef-profile></div>
             </div>
         </div>
     </div>
@@ -898,7 +892,6 @@
         </div>
       </div>
     </div> -->
-    <div booking booked-chef="honey"></div>
 
    <!--  <div class="modal fade modal-fullscreen menu-booking-modal" id="honeyBookingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -1090,7 +1083,6 @@
         </div>
       </div>
     </div> -->
-    <div booking-flow booked-chef="honey" chef-display-name="Chef Honey"></div>
 
     <div class="modal fade modal-fullscreen menu-modal" id="sherModal" chef="sher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -1602,8 +1594,9 @@
     <!-- Including main.js -> it contains angular related JS -->
     <script src="js/main.js"></script>
     <!-- Including directives JS -->
-    <script src="common/bookingFlow/bookingFlow.js"></script>
+    <script src="common/chefProfile/chefProfile.js"></script>
     <script src="common/booking/booking.js"></script>
+    <script src="common/bookingFlow/bookingFlow.js"></script>
     <script type="text/javascript">
         var nlform1 = new NLForm( $("#tabrezBookingModal .nl-form").get(0) );
         var nlform3 = new NLForm( $("#sherBookingModal .nl-form").get(0) );
