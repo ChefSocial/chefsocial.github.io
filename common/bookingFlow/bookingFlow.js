@@ -6,8 +6,7 @@
 			return {
 				templateUrl: 'common/bookingFlow/bookingFlow.html',
 				scope: {
-					bookedChef: '@',
-					chefDisplayName: '@'
+					chef: '='					
 				},
 				controller: ['$scope', '$timeout',function ($scope, $timeout){
 
@@ -20,7 +19,7 @@
 					    $('.close-menu-modal').on('click', function(){
 					        // Resetting the booking data to when opening the booking flow - step 1
 					        bookingData = {};
-					        var chef = $scope.bookedChef;
+					        var chef = $scope.chef.name;
 					        var menu = $(this).attr('menu');
 					        // Show step-1 and Hide the step 2 and 3 of the booking modal by default
 					        $('#' + chef + 'BookingFlowModal .step[step="1"]').show();
@@ -55,16 +54,16 @@
 				   		// Capturing User Entered Data
 					    var bookingData = {};
 				        var captureStep1Data = function (){
-					        bookingData["number_of_people"] = $('#'+ $scope.bookedChef +'BookingFlowModal select[name="number_of_people"]').find(':selected').val();
-					        bookingData["month"] = $('#'+ $scope.bookedChef +'BookingFlowModal select[name="month"]').find(':selected').val();
-					        bookingData["date"] = $('#'+ $scope.bookedChef +'BookingFlowModal select[name="date"]').find(':selected').val();
-					        bookingData["hour"] = $('#'+ $scope.bookedChef +'BookingFlowModal select[name="hour"]').find(':selected').val();
-					        bookingData["time"] = $('#'+ $scope.bookedChef +'BookingFlowModal select[name="time"]').find(':selected').val();
+					        bookingData["number_of_people"] = $('#'+ $scope.chef.name +'BookingFlowModal select[name="number_of_people"]').find(':selected').val();
+					        bookingData["month"] = $('#'+ $scope.chef.name +'BookingFlowModal select[name="month"]').find(':selected').val();
+					        bookingData["date"] = $('#'+ $scope.chef.name +'BookingFlowModal select[name="date"]').find(':selected').val();
+					        bookingData["hour"] = $('#'+ $scope.chef.name +'BookingFlowModal select[name="hour"]').find(':selected').val();
+					        bookingData["time"] = $('#'+ $scope.chef.name +'BookingFlowModal select[name="time"]').find(':selected').val();
 					        console.log(bookingData);
 					    };
 
 					    var afterTemplateRendered = function (){
-					    	var nlform2 = new NLForm( $("#"+$scope.bookedChef+"BookingFlowModal .nl-form").get(0) );
+					    	var nlform2 = new NLForm( $("#"+$scope.chef.name+"BookingFlowModal .nl-form").get(0) );
 					    };
 					    $timeout(afterTemplateRendered, 0);
 

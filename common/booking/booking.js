@@ -6,12 +6,14 @@
 			return {
 				templateUrl: 'common/booking/booking.html',
 				scope: {
-					bookedChef: '@',
-					numberOfMenus: '@'
+					chef: '='
 				},
 				controller: ['$rootScope', '$scope', '$timeout',function ($rootScope, $scope, $timeout){
 
-					
+					var init = function (){
+						$scope.images = ["0", "1"];
+					}
+					init();
 
 					// Closing the booking modal
 				    $('.close-menu-modal').on('click', function(){

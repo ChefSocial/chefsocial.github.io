@@ -1,4 +1,4 @@
-<div class="modal fade modal-fullscreen menu-booking-modal" id="{{bookedChef}}BookingFlowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade modal-fullscreen menu-booking-modal" id="{{chef.name}}BookingFlowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="row">
@@ -9,7 +9,7 @@
           <div class="modal-body">
             <div class="row">
                 <div class="col-md-4 pull-right right-align">
-                    <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#{{bookedChef}}BookingModal">See Menus</div>
+                    <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingModal">See Menus</div>
                 </div>
             </div>
             <div class="row">
@@ -27,7 +27,7 @@
                         <form id="nl-form" class="nl-form">
                             I want to book 
                             <select>
-                                <option selected>{{ chefDisplayName }}</option>
+                                <option selected>{{ chef.displayName }}</option>
                             </select>
                             <br />
                             for
@@ -177,7 +177,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Hi {{ booked.name }}, thanks for booking {{chefDisplayName}} to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h3>
+                            <h3>Hi {{ booked.name }}, thanks for booking {{chef.displayName}} to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h3>
                         </div>
                     </div>
                     <div class="row">
