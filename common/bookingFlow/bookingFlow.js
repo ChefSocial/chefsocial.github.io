@@ -21,7 +21,8 @@
 						}
 
 						$scope.prepareBookingFlow = function (){
-
+							$('#'+$scope.chef.name+'BookingFlowModal .step[step="1"]').show();
+							$('#'+$scope.chef.name+'BookingFlowModal .step[step="2"], #'+$scope.chef.name+'BookingFlowModal .step[step="3"]').hide();
 						};
 
 				   		// Capturing User Entered Data
