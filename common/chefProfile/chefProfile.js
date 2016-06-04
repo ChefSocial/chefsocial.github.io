@@ -20,7 +20,8 @@
                                 'menus': [
                                 {
                                     'name': 'Menu1 Name',
-                                    'imageUrl': 'img/menu/honey-menu-1.png'
+                                    'imageUrl': 'img/menu/honey-menu-1.png',
+                                    'bookedImageUrl': 'img/menu/honey-booked-menu-1.jpg'
                                 },
                                 {
                                     'name': 'Menu2 Name',

@@ -1,3 +1,49 @@
+<div class="modal fade modal-fullscreen menu-modal" id="{{chef.name}}BookingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="position:relative;right:-12rem;top:2rem;font-size:4rem;">X</span></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="{{chef.name}}Carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+              <ol class="carousel-indicators">
+                <!-- fix the data-slide-to issue -->
+                <li ng-repeat="menu in chef.menus" data-target="#{{chef.name}}Carousel" data-slide-to="$index" ng-class="{active: $first}"></li>
+              </ol>
+
+              <div class="carousel-inner" role="listbox">
+                <div ng-repeat="menu in chef.menus track by $index" ng-class="{item: true, active: $first}">
+                  <img src="{{menu.imageUrl}}" alt="">
+                  <div class="carousel-caption">
+                    <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingFlowModal" ng-click="closeModal($event);setSelectedMenu(menu);prepareBookingFlow();">Book This Menu</div>
+                  </div>
+                </div>
+              </div>
+
+              <a class="left carousel-control" href="#{{chef.name}}Carousel" role="button" data-slide="prev">
+                <span class="icon fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#{{chef.name}}Carousel" role="button" data-slide="next">
+                <span class="icon icon fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==|| -->
+
+
 <div class="modal fade modal-fullscreen menu-booking-modal" id="{{chef.name}}BookingFlowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -9,7 +55,7 @@
           <div class="modal-body">
             <div class="row">
                 <div class="col-md-4 pull-right right-align">
-                    <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingModal">See Menus</div>
+                    <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingModal" ng-click="closeModal($event)">See Menus</div>
                 </div>
             </div>
             <div class="row">
@@ -20,7 +66,7 @@
             <div class="row step" step="1" style="margin-top:4rem;">
                 <div class="col-md-5 center-align">
                     <h3 class="font-weight-600">Selected Menu</h3>
-                    <img src="" class="menu-image">
+                    <img src="{{bookingData.menu.bookedImageUrl}}" class="menu-image">
                 </div> 
                 <div class="col-md-7 margin-top-2rem">
                     <div class="main clearfix center-align">

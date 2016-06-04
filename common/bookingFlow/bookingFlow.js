@@ -10,46 +10,19 @@
 				},
 				controller: ['$scope', '$timeout',function ($scope, $timeout){
 
-					    // Closing the bookingFlow modal
-					    $('.goto-menu-modal').on('click', function(){
-					        $(this).closest('.modal').modal('hide');
-					    });
+					    $scope.bookingData = {};
+					    $scope.closeModal = function ($event){
+							// closing the currently opened modal
+							angular.element($event.currentTarget).closest('.modal').modal('hide');
+						};
 
-					    // Dynamically changing the booked menu image of a chef
-					    $('.close-menu-modal').on('click', function(){
-					        // Resetting the booking data to when opening the booking flow - step 1
-					        bookingData = {};
-					        var chef = $scope.chef.name;
-					        var menu = $(this).attr('menu');
-					        // Show step-1 and Hide the step 2 and 3 of the booking modal by default
-					        $('#' + chef + 'BookingFlowModal .step[step="1"]').show();
-					        $('#' + chef + 'BookingFlowModal .step[step="2"], #' + chef + 'BookingFlowModal .step[step="3"]').hide();
-					        // Assigning the src of the image dynamically
-					        $('#'+chef+'BookingFlowModal .menu-image').attr("src", "img/menu/"+chef+"-booked-menu-"+menu+".jpg");
-					    });
+						$scope.setSelectedMenu = function (menu){
+							$scope.bookingData.menu = JSON.parse(angular.toJson(menu));
+						}
 
-					    // Generic navigation when clicked on navigate buttom to take to corresponding step
-					    $('.menu-booking-modal .navigate').on('click', function(){
-					        // getting the action to got to next or previous
-					        var action = $(this).attr("action");
-					        var currentStep = $(this).closest('.step');
-					        var currentStepNumber = currentStep.attr('step');
-					        if(action == "next"){
-					            var futureStepNumber = parseInt(currentStepNumber) + 1;
-					        }else{
-					            var futureStepNumber = parseInt(currentStepNumber) - 1;
-					        }
-					        switch(currentStepNumber){
-					            case "1":
-					                captureStep1Data();
-					                break;
-					        };
-					        // show future step with animation + hide current step with animation
-					        var futureStep = currentStep.siblings(".step[step='" +  futureStepNumber + "']");
-					        currentStep.fadeOut(250, function(){
-					            futureStep.fadeIn(250);
-					        });
-					    });
+						$scope.prepareBookingFlow = function (){
+
+						};
 
 				   		// Capturing User Entered Data
 					    var bookingData = {};
@@ -64,18 +37,48 @@
 
 					    var afterTemplateRendered = function (){
 					    	var nlform2 = new NLForm( $("#"+$scope.chef.name+"BookingFlowModal .nl-form").get(0) );
+					    	// Generic navigation when clicked on navigate buttom to take to corresponding step
+						    $('#'+$scope.chef.name+'BookingFlowModal.menu-booking-modal .navigate').on('click', function(){
+						        // getting the action to got to next or previous
+						        var action = $(this).attr("action");
+						        var currentStep = $(this).closest('.step');
+						        var currentStepNumber = currentStep.attr('step');
+						        if(action == "next"){
+						            var futureStepNumber = parseInt(currentStepNumber) + 1;
+						        }else{
+						            var futureStepNumber = parseInt(currentStepNumber) - 1;
+						        }
+						        switch(currentStepNumber){
+						            case "1":
+						                captureStep1Data();
+						                break;
+						        };
+						        // show future step with animation + hide current step with animation
+						        var futureStep = currentStep.siblings(".step[step='" +  futureStepNumber + "']");
+						        currentStep.fadeOut(250, function(){
+						            futureStep.fadeIn(250);
+						        });
+						    });
 					    };
 					    $timeout(afterTemplateRendered, 0);
 
 					    // JS to make the menu modal full screen
-					    $(".modal-fullscreen").on('show.bs.modal', function () {
-					      setTimeout( function() {
-					        $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-					      }, 0);
-					    });
-					    $(".modal-fullscreen").on('hidden.bs.modal', function () {
-					      $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-					    });
+					    $(".modal-transparent").on('show.bs.modal', function () {
+	                      setTimeout( function() {
+	                        $(".modal-backdrop").addClass("modal-backdrop-transparent");
+	                      }, 0);
+	                    });
+	                    $(".modal-transparent").on('hidden.bs.modal', function () {
+	                      $(".modal-backdrop").addClass("modal-backdrop-transparent");
+	                    });
+	                    $(".modal-fullscreen").on('show.bs.modal', function () {
+	                      setTimeout( function() {
+	                        $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+	                      }, 0);
+	                    });
+	                    $(".modal-fullscreen").on('hidden.bs.modal', function () {
+	                      $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+	                    });
 
 				}]
 			};
