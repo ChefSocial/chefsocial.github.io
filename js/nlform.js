@@ -178,7 +178,8 @@
 					// update selected index value
 					this.selectedIdx = idx;
 					// update original select element´s value
-					this.elOriginal.value = this.elOriginal.children[ this.selectedIdx ].value;
+					if(this.elOriginal.value != "bookingDate")
+						this.elOriginal.value = this.elOriginal.children[ this.selectedIdx ].value;
 
 					// Creating a custom JS event for NL form dropdown close
 				    var closeDropDown = new CustomEvent(

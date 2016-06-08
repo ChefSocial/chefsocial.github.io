@@ -19,7 +19,7 @@
                 <div ng-repeat="menu in chef.menus track by $index" ng-class="{item: true, active: $first}">
                   <img src="{{menu.imageUrl}}" alt="">
                   <div class="carousel-caption">
-                    <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingFlowModal" ng-click="closeModal($event);setSelectedMenu(menu);prepareBookingFlow();">Book This Menu</div>
+                    <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingFlowModal" ng-click="closeModal($event);setBookingData(menu);prepareBookingFlow();">Book This Menu</div>
                   </div>
                 </div>
               </div>
@@ -72,46 +72,42 @@
                     <div class="main clearfix center-align">
                         <form id="nl-form" class="nl-form">
                             I want to book 
-                            <select>
-                                <option selected>{{ chef.displayName }}</option>
+                            <select name="bookingChef">
+                                <option value="bookingChef" selected>{{ chef.displayName }}</option>
                             </select>
                             <br />
                             for
-                            <select>
+                            <select name="bookingCapacity">
                                 <option ng-repeat="capacity in chef.capacity" value="bookingCapacity" ng-selected="$first">{{ capacity }}</option>
                             </select>
                             people
                             <br/>
-                            on 
-                            <select>
+                            on  
+                            <select name="bookingMonth" class="booking-month-select">
                                 <option ng-repeat="month in chef.availableMonths" value="bookingMonth" ng-selected="$first">{{month}}</option>
                             </select>
-                            <select class="date-select">
+                            <select name="bookingDate">
                                 <option ng-repeat="date in datesForSelectedMonth" value="bookingDate" ng-selected="$first">{{date}}</option>
                             </select>
                             at 
-                            <select name="hour">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8" selected>8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
+                            <select name="bookingHour">
+                                <option value="bookingHour">1</option>
+                                <option value="bookingHour">2</option>
+                                <option value="bookingHour">3</option>
+                                <option value="bookingHour">4</option>
+                                <option value="bookingHour">5</option>
+                                <option value="bookingHour">6</option>
+                                <option value="bookingHour">7</option>
+                                <option value="bookingHour" selected>8</option>
+                                <option value="bookingHour">9</option>
+                                <option value="bookingHour">10</option>
+                                <option value="bookingHour">11</option>
+                                <option value="bookingHour">12</option>
                             </select>
-                            <select name="time">
-                                <option value="pm" selected>p.m.</option>
-                                <option value="am">a.m.</option>
+                            <select name="bookingTime">
+                                <option value="bookingTime" selected>p.m.</option>
+                                <option value="bookingTime">a.m.</option>
                             </select>
-                            <!-- <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
-                            <div class="nl-submit-wrap">
-                                <button class="nl-submit" type="submit">Find a restaurant</button>
-                            </div> -->
                             <div class="nl-overlay"></div>
                         </form>
                     </div>
@@ -131,7 +127,7 @@
                                 <label>Name</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="name" aria-label="" placeholder="Name" ng-model="booked.name">
+                                <input type="text" class="form-control" name="name" aria-label="" placeholder="Name" ng-model="bookingData.name">
                             </div>
                         </div>
                         <div class="row">
@@ -139,7 +135,7 @@
                                 <label>Phone no.</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="number" class="form-control" name="phone_number" aria-label="" placeholder="Phone Number" ng-model="booked.phone_number">
+                                <input type="number" class="form-control" name="phone_number" aria-label="" placeholder="Phone Number" ng-model="bookingData.phone_number">
                             </div>
                         </div>
                         <div class="row">
@@ -147,7 +143,7 @@
                                 <label>Address</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="address" aria-label="" placeholder="Flat No., Street" ng-model="booked.address">
+                                <input type="text" class="form-control" name="address" aria-label="" placeholder="Flat No., Street" ng-model="bookingData.address">
                             </div>
                         </div>
                         <div class="row">
@@ -155,7 +151,7 @@
                                 <label>City</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="city" aria-label="" placeholder="City" ng-model="booked.city">
+                                <input type="text" class="form-control" name="city" aria-label="" placeholder="City" ng-model="bookingData.city">
                             </div>
                         </div>
                         <div class="row">
@@ -163,7 +159,7 @@
                                 <label>Postal Code</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="booked.postal_code">
+                                <input type="text" class="form-control" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="bookingData.postal_code">
                             </div>
                         </div> 
                     </div>
@@ -180,7 +176,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Hi {{ booked.name }}, thanks for booking {{chef.displayName}} to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h3>
+                            <h3>Hi {{ bookingData.name }}, thanks for booking {{chef.displayName}} to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h3>
                         </div>
                     </div>
                     <div class="row">

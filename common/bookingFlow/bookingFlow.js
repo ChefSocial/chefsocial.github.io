@@ -11,12 +11,11 @@
 				controller: ['$scope', '$timeout',function ($scope, $timeout){
 
 					    (function init() {
-							$scope.bookingData = {};
+							$scope.bookingData = $scope.chef.defaultBookingData;
 							// Setting the default value
 							$scope.datesForSelectedMonth = [1];
 						}());
 
-						//Listen to your custom event
 						window.addEventListener('closingDropDown', function (e) {
 							$scope.bookingData[e.detail.field] = e.detail.value;
 							if(e.detail.field == "bookingMonth"){
@@ -46,7 +45,7 @@
 							angular.element($event.currentTarget).closest('.modal').modal('hide');
 						};
 
-						$scope.setSelectedMenu = function (menu){
+						$scope.setBookingData = function (menu){
 							$scope.bookingData.menu = JSON.parse(angular.toJson(menu));
 						}
 
@@ -72,6 +71,7 @@
 						        currentStep.fadeOut(250, function(){
 						            futureStep.fadeIn(250);
 						        });
+						        console.log($scope.bookingData);
 						    });
 					    };
 					    var afterTemplateRendered = function (){
