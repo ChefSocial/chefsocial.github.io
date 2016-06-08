@@ -27,6 +27,13 @@
                                     'name': 'Menu2 Name',
                                     'imageUrl': 'img/menu/honey-menu-2.png'
                                 }],
+                                'capacity': [2,3,4,5,6,7,8,9,10,11,12],
+                                'availableMonths': ['June', 'July', 'August'],
+                                'availability': {
+                                    'June': [1,2,3,4,5,6,7,8,9,10,15,18,21,22,23,24,29,30],
+                                    'July': [2,3,4,5,6,7,8,9,10,15,18,21,22,23,24,29,30],
+                                    'August': [3,4,5,6,7,8,9,10,15,18,21,22,23,24,29,30]
+                                },
                                 'bio1': 'Hailing from the foothills of the great Himalayas, Chef Honey brings to you innovative and healthy brunches and dinners inspired by the freestyle cooking techniques of Jamie Oliver.',
                                 'bio2': 'Have Chef Honey whip up an amazing brunch tomorrow morning!'
                             },

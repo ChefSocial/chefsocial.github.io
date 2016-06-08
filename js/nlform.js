@@ -69,6 +69,8 @@
 			var self = this;
 			this.fld = document.createElement( 'div' );
 			this.fld.className = 'nl-field nl-dd';
+			if(this.elOriginal.value == "bookingDate")
+				this.fld.className += ' ' + this.elOriginal.value;
 			this.toggle = document.createElement( 'a' );
 			this.toggle.innerHTML = this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML;
 			this.toggle.className = 'nl-field-toggle';
@@ -123,7 +125,11 @@
 			if( this.type === 'dropdown' ) {
 				var opts = Array.prototype.slice.call( this.optionsList.querySelectorAll( 'li' ) );
 				opts.forEach( function( el, i ) {
-					el.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
+					el.addEventListener( 'click', function( ev ) { 
+						ev.preventDefault(); 
+						self.close( el, opts.indexOf( el ) ); 
+					});
+					// el.on( 'click', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
 					el.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
 				} );
 			}
@@ -146,6 +152,13 @@
 			this.form.fldOpen = this.pos;
 			var self = this;
 			this.fld.className += ' nl-field-open';
+			if(this.elOriginal.value == "bookingDate"){
+				var optionsList = document.getElementsByClassName('bookingDate')[0].getElementsByTagName('ul');
+				this.optionsList = document.createElement( 'ul' );
+				this.optionsList.innerHTML = optionsList[0].innerHTML;
+				this.fld.appendChild( this.optionsList );
+				this._initEvents();
+			}
 		},
 		close : function( opt, idx ) {
 			if( !this.open ) {
@@ -166,6 +179,18 @@
 					this.selectedIdx = idx;
 					// update original select element´s value
 					this.elOriginal.value = this.elOriginal.children[ this.selectedIdx ].value;
+
+					// Creating a custom JS event for NL form dropdown close
+				    var closeDropDown = new CustomEvent(
+				        "closingDropDown", {
+				        	detail:{
+				        		field: this.elOriginal.value,
+				        		value: opt.innerHTML
+				        	}
+				        }
+				    );
+					// Emitting closing dropdown event
+					window.dispatchEvent(closeDropDown);
 				}
 			}
 			else if( this.type === 'input' ) {
