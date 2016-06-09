@@ -127,7 +127,7 @@
                                 <label>Name</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="name" aria-label="" placeholder="Name" ng-model="bookingData.name">
+                                <input type="text" class="form-control" name="name" aria-label="" placeholder="Name" ng-model="bookingData.bookingName">
                             </div>
                         </div>
                         <div class="row">
@@ -135,7 +135,7 @@
                                 <label>Phone no.</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="number" class="form-control" name="phone_number" aria-label="" placeholder="Phone Number" ng-model="bookingData.phone_number">
+                                <input type="number" class="form-control" name="phone_number" aria-label="" placeholder="Phone Number" ng-model="bookingData.bookingPhone_number">
                             </div>
                         </div>
                         <div class="row">
@@ -143,7 +143,7 @@
                                 <label>Address</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="address" aria-label="" placeholder="Flat No., Street" ng-model="bookingData.address">
+                                <input type="text" class="form-control" name="address" aria-label="" placeholder="Flat No., Street" ng-model="bookingData.bookingAddress">
                             </div>
                         </div>
                         <div class="row">
@@ -151,7 +151,7 @@
                                 <label>City</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="city" aria-label="" placeholder="City" ng-model="bookingData.city">
+                                <input type="text" class="form-control" name="city" aria-label="" placeholder="City" ng-model="bookingData.bookingCity">
                             </div>
                         </div>
                         <div class="row">
@@ -159,7 +159,7 @@
                                 <label>Postal Code</label>
                             </div>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="bookingData.postal_code">
+                                <input type="text" class="form-control" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="bookingData.bookingPostal_code">
                             </div>
                         </div> 
                     </div>
@@ -169,27 +169,59 @@
                     <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
                 </div>
             </div>
-            <div class="row step" step="3">
+            <div class="row step summary" step="3">
                 <div class="col-md-12">
                     <h2>Summary:</h2>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 padding-left-3rem">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Hi {{ bookingData.name }}, thanks for booking {{chef.displayName}} to cook up the amazing menu at your place on the 19th of May, at 8:00PM. Please check the details below and confirm to recieve a payment link.</h3>
+                            <p>Hi {{ bookingData.bookingName }}, thanks for booking <span class="cs-color">{{chef.displayName}}</span> to cook up the amazing menu at your place on <span class="cs-color">{{bookingData.bookingMonth}} {{bookingData.bookingDate}}</span>, at <span class="cs-color">{{bookingData.bookingHour}}{{bookingData.bookingTime}}</span>. Please check the details below and confirm to recieve a payment link.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-5">
-                            
+                            <div class="row padding-bottom-2rem">
+                                <div class="col-md-1 icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <!-- <p>{{bookingData.bookingAddress}}</p> -->
+                                    <!-- <p>{{bookingData.bookingCity}} {{bookingData.bookingPostal_code}}</p> -->
+                                    <p>Green Glen Layout, Bellandur<br>Bangalore 560103</p>
+                                </div>
+                            </div>
+                            <div class="row padding-bottom-2rem">
+                                <div class="col-md-1 icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <!-- <p>{{ bookingData.bookingCapacity }}</p> -->
+                                    <p>10 People</p>
+                                </div>
+                            </div>
+                            <div class="row padding-bottom-2rem">
+                                <div class="col-md-1 icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <!-- <p>{{ bookingData.bookingPhone_number }}</p> -->
+                                    <p>9980475289</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-7">
-                            
+                        <div class="col-md-7 right-align">
+                            <img src="{{bookingData.menu.bookedImageUrl}}" style="height:25rem;">
                         </div>
                     </div>
+                    <div class="row">
+                        <p>To ensure a totally personalised experience, Chef Honey may call you to get some more details.</p>
+                        <!-- <p>Please click here to update any of the above details</p> -->
+                    </div>
                 </div>
-                <div class="col-md-12 pull-right right-align">
-                    <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                <div class="col-md-4 col-md-offset-8 right-align vertically-align-children">
+                    <h2 class="pull-left margin-0 padding-right-10">Rs.8600/-</h2>
+                    <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Get Payment Link</div>
                 </div>
             </div>
           </div>

@@ -41,7 +41,6 @@
 						};
 
 					    $scope.closeModal = function ($event){
-							// closing the currently opened modal
 							angular.element($event.currentTarget).closest('.modal').modal('hide');
 						};
 

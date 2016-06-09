@@ -48,7 +48,7 @@
                         };
                     };
                     init();
-                    
+                    // setting the default booking data for the selected chef
                     $scope.data[$scope.chefName].defaultBookingData = {
                         'bookingChef': $scope.data[$scope.chefName].name,
                         'menu': $scope.data[$scope.chefName].menus[0],

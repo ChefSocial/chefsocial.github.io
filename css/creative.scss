@@ -1010,6 +1010,7 @@ hr {
 
 /* ================== Menu Booking Modal CSS ================== */
 .menu-booking-modal{
+  /*overflow-y: scroll;*/
   .menu-btn-inverted{
     color: #EC6862;
     border: 1px solid #EC6862;
@@ -1041,6 +1042,20 @@ hr {
       label{
         font-weight: 200;
         padding: 1rem 0;
+      }
+    }
+  }
+  .summary{
+    p{
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+    .icon{
+      i{
+        color: #EC6862;
+        font-size: 1.6rem;
+        position: relative;
+        top: .6rem;
       }
     }
   }
@@ -1156,6 +1171,13 @@ hr {
 .right-align {
   text-align: -webkit-right;
 }
+.vertically-align-children{
+  display: flex;
+  align-items: center;
+}
+.margin-0{
+  margin: 0!important;
+}
 .padding-0 {
   padding: 0;
 }
@@ -1171,11 +1193,17 @@ hr {
 .padding-left-10{
     padding-left: 10px!important;
 }
+.padding-left-3rem{
+  padding-left: 3rem!important;
+}
 .padding-right-10{
     padding-right: 10px!important;
 }
 .padding-top-15rem{
     padding-top: 15rem!important;
+}
+.padding-bottom-2rem{
+  padding-bottom: 2rem!important;
 }
 .font-weight-600{
   font-weight: 600!important;
@@ -1214,6 +1242,9 @@ hr {
   .sub-text{
     width: 100%;
   }
+}
+.cs-color{
+  color: $food-red;
 }
 
 /* ================== MEDIA QUERIES ================== */
