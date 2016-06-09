@@ -25,7 +25,8 @@
                                 },
                                 {
                                     'name': 'Menu2 Name',
-                                    'imageUrl': 'img/menu/honey-menu-2.png'
+                                    'imageUrl': 'img/menu/honey-menu-2.png',
+                                    'bookedImageUrl': 'img/menu/honey-booked-menu-2.jpg'
                                 }],
                                 'capacity': [2,3,4,5,6,7,8,9,10,11,12],
                                 'availableMonths': ['June', 'July', 'August'],
