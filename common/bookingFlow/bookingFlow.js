@@ -8,7 +8,7 @@
 				scope: {
 					chef: '='					
 				},
-				controller: ['$scope', '$timeout',function ($scope, $timeout){
+				controller: ['$scope', '$timeout', '$http',function ($scope, $timeout, $http){
 
 					    (function init() {
 							$scope.bookingData = $scope.chef.defaultBookingData;
@@ -17,12 +17,61 @@
 						}());
 
 						window.addEventListener('closingDropDown', function (e) {
-							$scope.bookingData[e.detail.field] = e.detail.value;
-							if(e.detail.field == "bookingMonth"){
-								$scope.datesForSelectedMonth = $scope.chef.availability[e.detail.value];
-								_reCreateDropDown();
-							}
+							$scope.$apply(function (){
+								$scope.bookingData[e.detail.field] = e.detail.value;
+								if(e.detail.field == "bookingMonth"){
+									$scope.datesForSelectedMonth = $scope.chef.availability[e.detail.value];
+									_reCreateDropDown();
+								}
+								if(e.detail.field == "bookingCapacity"){
+									$scope.bookingData.bookingCost = $scope.bookingData.bookingMenu.pricePerPerson[e.detail.value] * e.detail.value;
+								}
+							});
 						});
+
+						$scope.sendMail = function (){
+							// akashdevaraju@gmail.com, shivamleo@gmail.com
+							var emailData = {
+							  "From": "hello@chef.social",
+							  "To": "hello@chef.social",
+							  "Cc": "rox.rachit@gmail.com",
+							  "Subject": "New Booking",
+							  "Tag": "ChefSocial Booking",
+							  "HtmlBody": "<h2>Hello Guys, we've got a new booking :)</h2><br> <h3>Let's Do This!!</h3>",
+							  "TextBody": "This is the Text Body",
+							  "ReplyTo": "hello@chef.social",
+							  // "Headers": [
+							  //   {
+							  //     "Name": "CUSTOM-HEADER",
+							  //     "Value": "value"
+							  //   }
+							  // ],
+							  "TrackOpens": true,
+							};
+							$http({
+								method: 'POST',
+								url: 'https://api.postmarkapp.com/email',
+								headers: {
+									'Access-Control-Allow-Origin': '*',
+									'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+									'Access-Control-Allow-Headers': 'Content-Type, Content-Length, X-Requested-With, X-Postmark-Server-Token',
+									'Content-Type': 'application/json',
+									'Accept': 'application/json',
+									'X-Postmark-Server-Token': '5a88cdda-12d6-4e62-a5e6-e10d718d0a2f'
+								},
+								data: emailData
+							})
+							.then(
+								function (data){
+									console.log(data);
+								}, 
+								function (data){
+									console.log(data);
+								}
+							);
+							console.log('ending...');
+							
+						};
 
 						var _reCreateDropDown = function() {
 							var options = '';
@@ -45,7 +94,8 @@
 						};
 
 						$scope.setBookingData = function (menu){
-							$scope.bookingData.menu = JSON.parse(angular.toJson(menu));
+							$scope.bookingData.bookingMenu = JSON.parse(angular.toJson(menu));
+							$scope.bookingData.bookingCost = $scope.bookingData.bookingMenu.pricePerPerson[$scope.bookingData.bookingCapacity] * $scope.bookingData.bookingCapacity;
 						}
 
 						$scope.prepareBookingFlow = function (){

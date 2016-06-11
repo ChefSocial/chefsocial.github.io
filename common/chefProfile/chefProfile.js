@@ -21,14 +21,44 @@
                                 {
                                     'name': 'Menu1 Name',
                                     'imageUrl': 'img/menu/honey-menu-1.png',
-                                    'bookedImageUrl': 'img/menu/honey-booked-menu-1.jpg'
+                                    'bookedImageUrl': 'img/menu/honey-booked-menu-1.jpg',
+                                    'pricePerPerson': {
+                                        '2': 1200,
+                                        '3': 1100,
+                                        '4': 1050,
+                                        '5': 1000,
+                                        '6': 950,
+                                        '7': 900,
+                                        '8': 850,
+                                        '9': 800,
+                                        '10': 750,
+                                        '11': 700,
+                                        '12': 650,
+                                        '13': 650,
+                                        '14': 600
+                                    }
                                 },
                                 {
                                     'name': 'Menu2 Name',
                                     'imageUrl': 'img/menu/honey-menu-2.png',
-                                    'bookedImageUrl': 'img/menu/honey-booked-menu-2.jpg'
+                                    'bookedImageUrl': 'img/menu/honey-booked-menu-2.jpg',
+                                    'pricePerPerson': {
+                                        '2': 1200,
+                                        '3': 1100,
+                                        '4': 1050,
+                                        '5': 1000,
+                                        '6': 950,
+                                        '7': 900,
+                                        '8': 850,
+                                        '9': 800,
+                                        '10': 750,
+                                        '11': 700,
+                                        '12': 650,
+                                        '13': 650,
+                                        '14': 600
+                                    }
                                 }],
-                                'capacity': [2,3,4,5,6,7,8,9,10,11,12],
+                                'capacity': [2,3,4,5,6,7,8,9,10,11,12,13,14],
                                 'availableMonths': ['June', 'July', 'August'],
                                 'availability': {
                                     'June': [1,2,3,4,5,6,7,8,9,10,15,18,21,22,23,24,29,30],

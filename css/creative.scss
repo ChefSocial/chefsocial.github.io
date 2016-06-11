@@ -1246,6 +1246,10 @@ hr {
 .cs-color{
   color: $food-red;
 }
+.red-border{
+  border-color: #EF6868 !important;
+  box-shadow: 0px 0px 2px rgb(236, 121, 121)!important;
+}
 
 /* ================== MEDIA QUERIES ================== */
 

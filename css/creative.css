@@ -927,6 +927,10 @@ hr {
 .cs-color {
   color: #EC6862; }
 
+.red-border {
+  border-color: #EF6868 !important;
+  box-shadow: 0px 0px 2px #ec7979 !important; }
+
 /* ================== MEDIA QUERIES ================== */
 @media (max-width: 992px) {
   .sm-img img, .md-img img {
