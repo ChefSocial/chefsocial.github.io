@@ -19,7 +19,7 @@
                                 'numberOfMenus': 2,
                                 'menus': [
                                 {
-                                    'name': 'Menu1 Name',
+                                    'name': 'Cheesy Indulgence',
                                     'imageUrl': 'img/menu/honey-menu-1.png',
                                     'bookedImageUrl': 'img/menu/honey-booked-menu-1.jpg',
                                     'pricePerPerson': {
@@ -92,22 +92,22 @@
                     $scope.chef = $scope.data[$scope.chefName];
 
                     // JS to make the menu modal full screen
-                    $(".modal-transparent").on('show.bs.modal', function () {
-                      setTimeout( function() {
-                        $(".modal-backdrop").addClass("modal-backdrop-transparent");
-                      }, 0);
-                    });
-                    $(".modal-transparent").on('hidden.bs.modal', function () {
-                      $(".modal-backdrop").addClass("modal-backdrop-transparent");
-                    });
+                    // $(".modal-transparent").on('show.bs.modal', function () {
+                    //   setTimeout( function() {
+                    //     $(".modal-backdrop").addClass("modal-backdrop-transparent");
+                    //   }, 0);
+                    // });
+                    // $(".modal-transparent").on('hidden.bs.modal', function () {
+                    //   $(".modal-backdrop").addClass("modal-backdrop-transparent");
+                    // });
                     $(".modal-fullscreen").on('show.bs.modal', function () {
                       setTimeout( function() {
                         $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
                       }, 0);
                     });
-                    $(".modal-fullscreen").on('hidden.bs.modal', function () {
-                      $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-                    });                   
+                    // $(".modal-fullscreen").on('hidden.bs.modal', function () {
+                    //   $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+                    // });                   
 
                 }]
             };

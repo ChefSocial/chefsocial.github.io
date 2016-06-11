@@ -45,204 +45,233 @@
 
 
 <div class="modal fade modal-fullscreen menu-booking-modal" id="{{chef.name}}BookingFlowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="row">
-            <div class="col-md-12">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="position:relative;right:-12rem;top:2rem;font-size:4rem;">X</span></button>
-            </div>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-                <div class="col-md-4 pull-right right-align">
-                    <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingModal" ng-click="closeModal($event)">See Menus</div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12">
-                    <!-- <h4>Completed steps flow will come here</h4> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="position:relative;right:-12rem;top:2rem;font-size:4rem;">X</span></button>
                 </div>
             </div>
-            <div class="row step" step="1" style="margin-top:4rem;">
-                <div class="col-md-5 center-align">
-                    <h3 class="font-weight-600">Selected Menu</h3>
-                    <img src="{{bookingData.bookingMenu.bookedImageUrl}}" class="menu-image">
-                </div> 
-                <div class="col-md-7 margin-top-2rem">
-                    <div class="main clearfix center-align">
-                        <form id="nl-form" class="nl-form">
-                            I want to book 
-                            <select name="bookingChef">
-                                <option value="bookingChef" selected>{{ chef.displayName }}</option>
-                            </select>
-                            <br />
-                            for
-                            <select name="bookingCapacity">
-                                <option ng-repeat="capacity in chef.capacity" value="bookingCapacity" ng-selected="$first">{{ capacity }}</option>
-                            </select>
-                            people
-                            <br/>
-                            on  
-                            <select name="bookingMonth" class="booking-month-select">
-                                <option ng-repeat="month in chef.availableMonths" value="bookingMonth" ng-selected="$first">{{month}}</option>
-                            </select>
-                            <select name="bookingDate">
-                                <option ng-repeat="date in datesForSelectedMonth" value="bookingDate" ng-selected="$first">{{date}}</option>
-                            </select>
-                            at 
-                            <select name="bookingHour">
-                                <option value="bookingHour">1</option>
-                                <option value="bookingHour">2</option>
-                                <option value="bookingHour">3</option>
-                                <option value="bookingHour">4</option>
-                                <option value="bookingHour">5</option>
-                                <option value="bookingHour">6</option>
-                                <option value="bookingHour">7</option>
-                                <option value="bookingHour" selected>8</option>
-                                <option value="bookingHour">9</option>
-                                <option value="bookingHour">10</option>
-                                <option value="bookingHour">11</option>
-                                <option value="bookingHour">12</option>
-                            </select>
-                            <select name="bookingTime">
-                                <option value="bookingTime" selected>p.m.</option>
-                                <option value="bookingTime">a.m.</option>
-                            </select>
-                            <div class="nl-overlay"></div>
-                        </form>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 pull-right right-align">
+                        <div class="btn btn-default btn-xl menu-btn-inverted goto-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingModal" ng-click="closeModal($event)">See Menus</div>
                     </div>
-                </div> 
-                <div class="col-md-3 col-md-offset-9">
-                    <div class="row vertically-align-children">
-                        <div class="col-md-7">
-                            <h2>Rs.{{bookingData.bookingCost}}/-</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <h4>Completed steps flow will come here</h4> -->
+                    </div>
+                </div>
+                <div class="row step" step="1" style="margin-top:4rem;">
+                    <div class="col-md-5 center-align">
+                        <h3 class="font-weight-600">Selected Menu</h3>
+                        <img src="{{bookingData.bookingMenu.bookedImageUrl}}" class="menu-image">
+                    </div> 
+                    <div class="col-md-7 margin-top-2rem">
+                        <div class="main clearfix center-align">
+                            <form id="nl-form" class="nl-form">
+                                I want to book 
+                                <select name="bookingChef">
+                                    <option value="bookingChef" selected>{{ chef.displayName }}</option>
+                                </select>
+                                <br />
+                                for
+                                <select name="bookingCapacity">
+                                    <option ng-repeat="capacity in chef.capacity" value="bookingCapacity" ng-selected="$first">{{ capacity }}</option>
+                                </select>
+                                people
+                                <br/>
+                                on  
+                                <select name="bookingMonth" class="booking-month-select">
+                                    <option ng-repeat="month in chef.availableMonths" value="bookingMonth" ng-selected="$first">{{month}}</option>
+                                </select>
+                                <select name="bookingDate">
+                                    <option ng-repeat="date in datesForSelectedMonth" value="bookingDate" ng-selected="$first">{{date}}</option>
+                                </select>
+                                at 
+                                <select name="bookingHour">
+                                    <option value="bookingHour">1</option>
+                                    <option value="bookingHour">2</option>
+                                    <option value="bookingHour">3</option>
+                                    <option value="bookingHour">4</option>
+                                    <option value="bookingHour">5</option>
+                                    <option value="bookingHour">6</option>
+                                    <option value="bookingHour">7</option>
+                                    <option value="bookingHour" selected>8</option>
+                                    <option value="bookingHour">9</option>
+                                    <option value="bookingHour">10</option>
+                                    <option value="bookingHour">11</option>
+                                    <option value="bookingHour">12</option>
+                                </select>
+                                <select name="bookingTime">
+                                    <option value="bookingTime" selected>p.m.</option>
+                                    <option value="bookingTime">a.m.</option>
+                                </select>
+                                <div class="nl-overlay"></div>
+                            </form>
                         </div>
-                        <div class="col-md-5">
-                            <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
+                    </div> 
+                    <div class="col-md-3 col-md-offset-9">
+                        <div class="row vertically-align-children">
+                            <div class="col-md-7">
+                                <h2>Rs.{{bookingData.bookingCost}}/-</h2>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next">Next</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form name="addressForm" class="row step" step="2">
+                    <div class="col-md-8 col-md-offset-2 font-weight-600">
+                        <h2>Address:</h2>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="address-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" ng-focus="name_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.name.$error.required && name_focus}" name="name" aria-label="" placeholder="Name" ng-model="bookingData.bookingName" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Phone no.</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" ng-focus="phone_number_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.phone_number.$error.required && phone_number_focus}"  name="phone_number" aria-label="" placeholder="Phone Number" ng-model="bookingData.bookingPhone_number" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Address</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" ng-focus="address_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.address.$error.required && address_focus}" name="address" aria-label="" placeholder="Flat No., Street" ng-model="bookingData.bookingAddress" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>City</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" ng-focus="city_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.city.$error.required && city_focus}" name="city" aria-label="" placeholder="City" ng-model="bookingData.bookingCity" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Postal Code</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" ng-focus="postal_code_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.postal_code.$error.required && postal_code_focus}" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="bookingData.bookingPostal_code" required>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2 right-align padding-right35px">
+                        <div class="row">
+                            <div class="col-md-6 left-align">
+                                <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                            </div>
+                            <div class="col-md-6 pull-right">
+                                <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next" ng-disabled="addressForm.$invalid">Next</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row step summary" step="3">
+                    <div class="col-md-12">
+                        <h2>Summary:</h2>
+                    </div>
+                    <div class="col-md-12 padding-left-3rem">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Hi {{ bookingData.bookingName }}, thanks for booking <span class="cs-color">{{chef.displayName}}</span> to cook up the amazing menu at your place on <span class="cs-color">{{bookingData.bookingMonth}} {{bookingData.bookingDate}}</span>, at <span class="cs-color">{{bookingData.bookingHour}}{{bookingData.bookingTime}}</span>. Please check the details below and confirm to recieve a payment link.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row padding-bottom-2rem">
+                                    <div class="col-md-1 icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <p>{{bookingData.bookingAddress}}<br>{{bookingData.bookingCity}} {{bookingData.bookingPostal_code}}</p>
+                                    </div>
+                                </div>
+                                <div class="row padding-bottom-2rem">
+                                    <div class="col-md-1 icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <p>{{ bookingData.bookingCapacity }} People</p>
+                                    </div>
+                                </div>
+                                <div class="row padding-bottom-2rem">
+                                    <div class="col-md-1 icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <p>{{ bookingData.bookingPhone_number }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 right-align">
+                                <img src="{{bookingData.bookingMenu.bookedImageUrl}}" style="height:25rem;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p>To ensure a totally personalised experience, Chef Honey may call you to get some more details.</p>
+                            <!-- <p>Please click here to update any of the above details</p> -->
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row vertically-align-children">
+                            <div class="col-md-8">
+                                <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
+                            </div>
+                            <div class="col-md-1">
+                                <h2>Rs.{{bookingData.bookingCost}}/-</h2>
+                            </div>
+                            <div class="col-md-3 right-align">
+                                <div class="btn btn-default btn-xl menu-btn-inverted" ng-click="sendMail();closeModal($event);" data-toggle="modal" data-target="#thankYouModal">Get Payment Link</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <form name="addressForm" class="row step" step="2">
-                <div class="col-md-8 col-md-offset-2 font-weight-600">
-                    <h2>Address:</h2>
-                </div>
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="address-form">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label>Name</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" ng-focus="name_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.name.$error.required && name_focus}" name="name" aria-label="" placeholder="Name" ng-model="bookingData.bookingName" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label>Phone no.</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" ng-focus="phone_number_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.phone_number.$error.required && phone_number_focus}"  name="phone_number" aria-label="" placeholder="Phone Number" ng-model="bookingData.bookingPhone_number" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label>Address</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" ng-focus="address_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.address.$error.required && address_focus}" name="address" aria-label="" placeholder="Flat No., Street" ng-model="bookingData.bookingAddress" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label>City</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" ng-focus="city_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.city.$error.required && city_focus}" name="city" aria-label="" placeholder="City" ng-model="bookingData.bookingCity" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label>Postal Code</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input type="text" ng-focus="postal_code_focus=true" ng-class="{'form-control': true, 'red-border': addressForm.postal_code.$error.required && postal_code_focus}" name="postal_code" aria-label="" placeholder="Postal Code" ng-model="bookingData.bookingPostal_code" required>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                <div class="col-md-8 col-md-offset-2 right-align padding-right35px">
-                    <div class="row">
-                        <div class="col-md-6 left-align">
-                            <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
-                        </div>
-                        <div class="col-md-6 pull-right">
-                            <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="next" ng-disabled="addressForm.$invalid">Next</div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="row step summary" step="3">
-                <div class="col-md-12">
-                    <h2>Summary:</h2>
-                </div>
-                <div class="col-md-12 padding-left-3rem">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>Hi {{ bookingData.bookingName }}, thanks for booking <span class="cs-color">{{chef.displayName}}</span> to cook up the amazing menu at your place on <span class="cs-color">{{bookingData.bookingMonth}} {{bookingData.bookingDate}}</span>, at <span class="cs-color">{{bookingData.bookingHour}}{{bookingData.bookingTime}}</span>. Please check the details below and confirm to recieve a payment link.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="row padding-bottom-2rem">
-                                <div class="col-md-1 icon">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="col-md-11">
-                                    <p>{{bookingData.bookingAddress}}<br>{{bookingData.bookingCity}} {{bookingData.bookingPostal_code}}</p>
-                                </div>
-                            </div>
-                            <div class="row padding-bottom-2rem">
-                                <div class="col-md-1 icon">
-                                    <i class="fa fa-users"></i>
-                                </div>
-                                <div class="col-md-11">
-                                    <p>{{ bookingData.bookingCapacity }} People</p>
-                                </div>
-                            </div>
-                            <div class="row padding-bottom-2rem">
-                                <div class="col-md-1 icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="col-md-11">
-                                    <p>{{ bookingData.bookingPhone_number }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7 right-align">
-                            <img src="{{bookingData.bookingMenu.bookedImageUrl}}" style="height:25rem;">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <p>To ensure a totally personalised experience, Chef Honey may call you to get some more details.</p>
-                        <!-- <p>Please click here to update any of the above details</p> -->
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="row vertically-align-children">
-                        <div class="col-md-8">
-                            <div class="btn btn-default btn-xl menu-btn-inverted navigate" action="back">Back</div>
-                        </div>
-                        <div class="col-md-1">
-                            <h2>Rs.{{bookingData.bookingCost}}/-</h2>
-                        </div>
-                        <div class="col-md-3 right-align">
-                            <div class="btn btn-default btn-xl menu-btn-inverted" ng-click="sendMail();">Get Payment Link</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+
+<!-- ==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==|| -->
+                                            <!-- THANK YOU MODAL -->
+<!-- ==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==|| -->
+
+<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content padding-3rem" style="border-radius:0;">
+            <div class="modal-body center-align padding-0">
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <h2>We've received your booking.</h2>  
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="font-size:4rem;">X</span></button>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Our team will send you a payment link of <span class="cs-color">Rs.{{bookingData.bookingCost}}/-</span> within 30 minutes.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

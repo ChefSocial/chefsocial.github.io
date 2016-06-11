@@ -30,47 +30,19 @@
 						});
 
 						$scope.sendMail = function (){
-							// akashdevaraju@gmail.com, shivamleo@gmail.com
-							var emailData = {
-							  "From": "hello@chef.social",
-							  "To": "hello@chef.social",
-							  "Cc": "rox.rachit@gmail.com",
-							  "Subject": "New Booking",
-							  "Tag": "ChefSocial Booking",
-							  "HtmlBody": "<h2>Hello Guys, we've got a new booking :)</h2><br> <h3>Let's Do This!!</h3>",
-							  "TextBody": "This is the Text Body",
-							  "ReplyTo": "hello@chef.social",
-							  // "Headers": [
-							  //   {
-							  //     "Name": "CUSTOM-HEADER",
-							  //     "Value": "value"
-							  //   }
-							  // ],
-							  "TrackOpens": true,
+							// var bookingDate = $scope.
+							var details = { 
+								"chef_name": $scope.chef.displayName, 
+								"booking_date": $scope.bookingData.bookingMonth+' '+$scope.bookingData.bookingDate, 
+								"booking_time": $scope.bookingData.bookingHour+$scope.bookingData.bookingTime,
+								"menu_name": $scope.bookingData.bookingMenu.name, 
+								"customer_name": $scope.bookingData.bookingName, 
+								"booking_capacity": $scope.bookingData.bookingCapacity, 
+								"booking_address": $scope.bookingData.bookingAddress+' '+$scope.bookingData.bookingCity+' '+$scope.bookingData.bookingPostal_code,
+								"booking_phone_number": $scope.bookingData.bookingPhone_number,
+								"payment_link_price": $scope.bookingData.bookingCost
 							};
-							$http({
-								method: 'POST',
-								url: 'https://api.postmarkapp.com/email',
-								headers: {
-									'Access-Control-Allow-Origin': '*',
-									'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-									'Access-Control-Allow-Headers': 'Content-Type, Content-Length, X-Requested-With, X-Postmark-Server-Token',
-									'Content-Type': 'application/json',
-									'Accept': 'application/json',
-									'X-Postmark-Server-Token': '5a88cdda-12d6-4e62-a5e6-e10d718d0a2f'
-								},
-								data: emailData
-							})
-							.then(
-								function (data){
-									console.log(data);
-								}, 
-								function (data){
-									console.log(data);
-								}
-							);
-							console.log('ending...');
-							
+							emailjs.send("cs_gmail", "new_cs_booking", details);
 						};
 
 						var _reCreateDropDown = function() {
@@ -131,22 +103,22 @@
 					    $timeout(afterTemplateRendered, 0);
 
 					    // JS to make the menu modal full screen
-					    $(".modal-transparent").on('show.bs.modal', function () {
-	                      setTimeout( function() {
-	                        $(".modal-backdrop").addClass("modal-backdrop-transparent");
-	                      }, 0);
-	                    });
-	                    $(".modal-transparent").on('hidden.bs.modal', function () {
-	                      $(".modal-backdrop").addClass("modal-backdrop-transparent");
-	                    });
+					    // $(".modal-transparent").on('show.bs.modal', function () {
+	        //               setTimeout( function() {
+	        //                 $(".modal-backdrop").addClass("modal-backdrop-transparent");
+	        //               }, 0);
+	        //             });
+	        //             $(".modal-transparent").on('hidden.bs.modal', function () {
+	        //               $(".modal-backdrop").addClass("modal-backdrop-transparent");
+	        //             });
 	                    $(".modal-fullscreen").on('show.bs.modal', function () {
 	                      setTimeout( function() {
 	                        $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
 	                      }, 0);
 	                    });
-	                    $(".modal-fullscreen").on('hidden.bs.modal', function () {
-	                      $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
-	                    });
+	                    // $(".modal-fullscreen").on('hidden.bs.modal', function () {
+	                    //   $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+	                    // });
 
 				}]
 			};
