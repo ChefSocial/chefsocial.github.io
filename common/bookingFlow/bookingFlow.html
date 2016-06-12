@@ -17,7 +17,7 @@
 
               <div class="carousel-inner" role="listbox">
                 <div ng-repeat="menu in chef.menus track by $index" ng-class="{item: true, active: $first}">
-                  <img src="{{menu.imageUrl}}" alt="">
+                  <img src="{{menu.imageUrl}}" alt="Image Not Available">
                   <div class="carousel-caption">
                     <div class="btn btn-default btn-xl menu-btn-inverted close-menu-modal" data-toggle="modal" data-target="#{{chef.name}}BookingFlowModal" ng-click="closeModal($event);setBookingData(menu);prepareBookingFlow();">Book This Menu</div>
                   </div>

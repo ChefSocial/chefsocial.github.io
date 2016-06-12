@@ -1,5 +1,5 @@
 <div class="row profile-row">
-    <div class="col-md-6 col-sm-12 padding-0 image-col">
+    <div ng-if="position=='left'" class="col-md-6 col-sm-12 padding-0 image-col">
         <div class="chef-profile-image" style="background: url({{chef.profileImageUrl}}) no-repeat;"></div>
     </div>
     <div class="col-md-6 col-sm-12" style="padding:5rem;">
@@ -14,6 +14,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div ng-if="position=='right'" class="col-md-6 col-sm-12 padding-0 image-col">
+        <div class="chef-profile-image" style="background: url({{chef.profileImageUrl}}) no-repeat;"></div>
     </div>
 </div>
 

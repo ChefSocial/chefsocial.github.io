@@ -42,7 +42,7 @@
 								"booking_phone_number": $scope.bookingData.bookingPhone_number,
 								"payment_link_price": $scope.bookingData.bookingCost
 							};
-							emailjs.send("cs_gmail", "new_cs_booking", details);
+							// emailjs.send("cs_gmail", "new_cs_booking", details);
 						};
 
 						var _reCreateDropDown = function() {
