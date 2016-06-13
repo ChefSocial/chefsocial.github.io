@@ -224,7 +224,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p>To ensure a totally personalised experience, Chef Honey may call you to get some more details.</p>
+                            <p>To ensure a totally personalised experience, {{chef.displayName}} may call you to get some more details.</p>
                             <!-- <p>Please click here to update any of the above details</p> -->
                         </div>
                     </div>
@@ -237,7 +237,7 @@
                                 <h2>Rs.{{bookingData.bookingCost}}/-</h2>
                             </div>
                             <div class="col-md-3 right-align">
-                                <div class="btn btn-default btn-xl menu-btn-inverted" ng-click="sendMail();closeModal($event);" data-toggle="modal" data-target="#thankYouModal">Get Payment Link</div>
+                                <div class="btn btn-default btn-xl menu-btn-inverted" ng-click="sendMail();closeModal($event);" data-toggle="modal" data-target="#{{chef.name}}ThankYouModal">Get Payment Link</div>
                             </div>
                         </div>
                     </div>
@@ -251,15 +251,10 @@
                                             <!-- THANK YOU MODAL -->
 <!-- ==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==||==|| -->
 
-<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel">
+<div class="modal fade" id="{{chef.name}}ThankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content padding-3rem" style="border-radius:0;">
             <div class="modal-body center-align padding-0">
-                <div class="row">
-                    <div class="col-md-12">
-                        
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-11">
                         <h2>We've received your booking.</h2>  

@@ -13,7 +13,8 @@
 					    (function init() {
 							$scope.bookingData = $scope.chef.defaultBookingData;
 							// Setting the default value
-							$scope.datesForSelectedMonth = [1];
+							// Make it current date
+							$scope.datesForSelectedMonth = [13];
 						}());
 
 						window.addEventListener('closingDropDown', function (e) {
@@ -30,7 +31,6 @@
 						});
 
 						$scope.sendMail = function (){
-							// var bookingDate = $scope.
 							var details = { 
 								"chef_name": $scope.chef.displayName, 
 								"booking_date": $scope.bookingData.bookingMonth+' '+$scope.bookingData.bookingDate, 
@@ -42,6 +42,7 @@
 								"booking_phone_number": $scope.bookingData.bookingPhone_number,
 								"payment_link_price": $scope.bookingData.bookingCost
 							};
+							console.log($scope.bookingData);
 							// emailjs.send("cs_gmail", "new_cs_booking", details);
 						};
 

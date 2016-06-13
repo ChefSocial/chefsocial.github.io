@@ -250,12 +250,13 @@
                     // setting the default booking data for the selected chef
                     $scope.data[$scope.chefName].defaultBookingData = {
                         'bookingChef': $scope.data[$scope.chefName].name,
-                        'menu': $scope.data[$scope.chefName].menus[0],
+                        'bookingMenu': $scope.data[$scope.chefName].menus[0],
                         'bookingCapacity': $scope.data[$scope.chefName].capacity[0],
                         'bookingMonth': $scope.data[$scope.chefName].availableMonths[0],
                         'bookingDate': $scope.data[$scope.chefName].availability[$scope.data[$scope.chefName].availableMonths[0]][0],
-                        'bookingHour': 2,
-                        'bookingTime': 'pm'
+                        'bookingHour': 8,
+                        'bookingTime': 'pm',
+                        'bookingCost': $scope.data[$scope.chefName].capacity[0] * $scope.data[$scope.chefName].menus[0].pricePerPerson[$scope.data[$scope.chefName].capacity[0]]
                     };
                     $scope.chef = $scope.data[$scope.chefName];
                     // JS to make the menu modal full screen
