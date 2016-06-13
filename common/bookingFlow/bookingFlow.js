@@ -42,8 +42,7 @@
 								"booking_phone_number": $scope.bookingData.bookingPhone_number,
 								"payment_link_price": $scope.bookingData.bookingCost
 							};
-							console.log($scope.bookingData);
-							// emailjs.send("cs_gmail", "new_cs_booking", details);
+							emailjs.send("cs_gmail", "new_cs_booking", details);
 						};
 
 						var _reCreateDropDown = function() {
@@ -93,7 +92,6 @@
 						        currentStep.fadeOut(250, function(){
 						            futureStep.fadeIn(250);
 						        });
-						        console.log($scope.bookingData);
 						    });
 					    };
 					    var afterTemplateRendered = function (){
