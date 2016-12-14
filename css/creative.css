@@ -680,7 +680,8 @@ hr {
   color: white;
   background-color: #222; }
   #contact a {
-    color: white !important; }
+    color: white !important;
+    text-decoration: none !important; }
   #contact i {
     color: #EC6862; }
 
