@@ -329,3 +329,17 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
+
+/*========= Custom CSS ============*/
+.collection, .product-listing{
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 5px;
+}
+.collection:hover, .product-listing:hover{
+  cursor: pointer;
+  background: whitesmoke;
+}

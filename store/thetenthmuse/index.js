@@ -28,24 +28,55 @@ $(function() {
   var previousFocusItem;
 
 
+  /* Fetch all collections and init
+  ============================================================ */
+  client.fetchAllCollections()
+    .then(function(collections) {
+      $.each(collections, function(index, collection) {
+        var attributes = collection.attrs;
+        var collection_html = '<div class="collection" collection-id="'+attributes.collection_id+'"">\
+          <h4>'+ attributes.title +'</h4>\
+          </div>';
+        $('.collections').append(collection_html);
+      });
+    }
+  );
+
+  $('body').on('click', '.collections .collection', function() {
+    var collectionId = $(this).attr("collection-id");
+    client.fetchQueryProducts({ collection_id: collectionId }).then(products => {
+      console.log(products);
+      $('.products').empty();
+      $.each(products, function(index, prod){
+        var prod_listing_html = '<div class="product-listing" product-id="'+prod.id+'"">\
+          <h4>'+ prod.title +'</h4>\
+          </div>';
+        $('.products').append(prod_listing_html);
+      });
+    });
+  });
+
   /* Fetch product and init
   ============================================================ */
-  client.fetchProduct('9525783553').then(function (fetchedProduct) {
-    product = fetchedProduct;
-    var selectedVariant = product.selectedVariant;
-    var selectedVariantImage = product.selectedVariantImage;
-    var currentOptions = product.options;
+  $('body').on('click', '.products .product-listing', function() {
+    var productId = $(this).attr("product-id");
+    client.fetchProduct(productId).then(function (fetchedProduct) {
+      product = fetchedProduct;
+      var selectedVariant = product.selectedVariant;
+      var selectedVariantImage = product.selectedVariantImage;
+      var currentOptions = product.options;
 
-    var variantSelectors = generateSelectors(product);
-    $('.variant-selectors').html(variantSelectors);
+      var variantSelectors = generateSelectors(product);
+      $('.variant-selectors').html(variantSelectors);
 
-    updateProductTitle(product.title);
-    updateVariantImage(selectedVariantImage);
-    updateVariantTitle(selectedVariant);
-    updateVariantPrice(selectedVariant);
-    attachOnVariantSelectListeners(product);
-    updateCartTabButton();
-    bindEventListeners();
+      updateProductTitle(product.title);
+      updateVariantImage(selectedVariantImage);
+      updateVariantTitle(selectedVariant);
+      updateVariantPrice(selectedVariant);
+      attachOnVariantSelectListeners(product);
+      updateCartTabButton();
+      bindEventListeners();
+    });
   });
 
   /* Generate DOM elements for variant selectors
