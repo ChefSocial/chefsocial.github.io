@@ -131,11 +131,14 @@ aside {
     border-color: rgba(255, 255, 255, 0.3);
     background-color: transparent; }
     .navbar-default .navbar-header .navbar-brand {
-      color: rgba(255, 255, 255, 0.7); }
+      color: white;
+      font-weight: 900;
+      font-family: "ProximaNova"; }
       .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
         color: #fff; }
     .navbar-default .nav > li > a {
-      color: rgba(255, 255, 255, 0.7); }
+      color: white;
+      font-family: "ProximaNova"; }
       .navbar-default .nav > li > a:focus {
         color: rgba(255, 255, 255, 0.7); }
       .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
@@ -161,7 +164,7 @@ header {
   text-align: center;
   color: #fff;
   /*background: url(../img/cover1.jpg) no-repeat center center fixed;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover1.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover3.jpg) no-repeat center center fixed;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -176,7 +179,8 @@ header {
       margin-top: 0;
       margin-bottom: 0;
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 700;
+      font-size: 48px !important; }
     header .header-content .header-content-inner hr {
       margin: 30px auto; }
     header .header-content .header-content-inner p {
@@ -461,7 +465,10 @@ body {
   .subscription-form input[type="submit"] {
     color: white;
     background-color: #EC6862;
-    border: 1px solid #EC6862; }
+    border: 1px solid #EC6862;
+    font-family: "ProximaNova";
+    font-weight: 900;
+    letter-spacing: 1px; }
 
 .call-to-action {
   min-height: 11rem; }
@@ -490,27 +497,93 @@ hr {
 
 .profile-section {
   /*padding: 80px 0;*/ }
-  .profile-section .profile-row .image-col {
-    height: 40rem;
-    overflow: hidden; }
-  .profile-section .profile-row .name, .profile-section .profile-row .description {
-    font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 600; }
-  .profile-section .profile-row .name {
-    font-size: 2.5rem; }
-  .profile-section .profile-row .description {
-    font-size: 2rem; }
-  .profile-section .profile-row .menu-btn {
-    color: white;
-    background-color: #EC6862;
-    border: 1px solid #EC6862; }
-    .profile-section .profile-row .menu-btn a {
+  .profile-section .profile-row {
+    min-height: 500px; }
+    .profile-section .profile-row .chef-profile-image {
+      width: 100%;
+      padding: 0;
+      margin-top: 0;
+      height: 100%;
+      background-position: center !important;
+      background-size: cover !important; }
+    .profile-section .profile-row .image-col {
+      height: 50rem;
+      overflow: hidden; }
+    .profile-section .profile-row .name, .profile-section .profile-row .description {
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600; }
+    .profile-section .profile-row .name {
+      font-size: 2.5rem;
+      font-family: "GothamMedium"; }
+    .profile-section .profile-row .description {
+      font-size: 2rem; }
+    .profile-section .profile-row .menu-btn {
       color: white;
-      text-decoration: none; }
-  .profile-section .profile-row .menu-btn-inverted {
-    color: #EC6862;
-    border: 1px solid #EC6862; }
+      background-color: #EC6862;
+      border: 1px solid #EC6862; }
+      .profile-section .profile-row .menu-btn a {
+        color: white;
+        text-decoration: none;
+        font-family: "ProximaNova"; }
+    .profile-section .profile-row .menu-btn-inverted {
+      color: #EC6862;
+      border: 1px solid #EC6862;
+      font-family: "ProximaNova"; }
 
+/* ================== Testimonial Section CSS ================== */
+.chef-registration-wrapper {
+  background-color: #222;
+  color: white;
+  padding: 5rem; }
+  .chef-registration-wrapper .description {
+    text-align: center;
+    display: none; }
+    .chef-registration-wrapper .description p {
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem !important; }
+
+/* ================== END Chef Registeration Section CSS ================== */
+/* ================== Testimonial Section CSS ================== */
+.testimonial-wrapper {
+  background-color: #f5f5f5;
+  padding: 5rem; }
+  .testimonial-wrapper .description {
+    text-align: center;
+    display: none; }
+    .testimonial-wrapper .description p {
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem !important; }
+  .testimonial-wrapper .image {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .2; }
+    .testimonial-wrapper .image:hover {
+      cursor: pointer; }
+  .testimonial-wrapper .active {
+    opacity: 1; }
+  .testimonial-wrapper .desc-active {
+    display: block; }
+  .testimonial-wrapper #img1 {
+    background-image: url("../img/Testimonials/1.jpg"); }
+  .testimonial-wrapper #img2 {
+    background-image: url("../img/Testimonials/2.jpg"); }
+  .testimonial-wrapper #img3 {
+    background-image: url("../img/Testimonials/3.jpg"); }
+  .testimonial-wrapper #img4 {
+    background-image: url("../img/Testimonials/4.jpg"); }
+  .testimonial-wrapper #img5 {
+    background-image: url("../img/Testimonials/5.jpg"); }
+  .testimonial-wrapper #img6 {
+    background-image: url("../img/Testimonials/6.jpg"); }
+
+/* ================== END Testimonial Section CSS ================== */
 /* ================== Menu Modal CSS ================== */
 #modal1 .modal-content {
   border-radius: 0; }
@@ -535,12 +608,12 @@ hr {
       width: 800px;
   } 
 }*/
-#carousel-example-generic img {
+#sherCarousel img, #tabrezCarousel img, #honeyCarousel img {
   height: 600px;
   margin: auto; }
-#carousel-example-generic .carousel-control {
+#sherCarousel .carousel-control, #tabrezCarousel .carousel-control, #honeyCarousel .carousel-control {
   background: none; }
-  #carousel-example-generic .carousel-control .icon {
+  #sherCarousel .carousel-control .icon, #tabrezCarousel .carousel-control .icon, #honeyCarousel .carousel-control .icon {
     width: 30px;
     height: 30px;
     margin-top: -15px;
@@ -551,9 +624,9 @@ hr {
     z-index: 5;
     display: inline-block;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-#carousel-example-generic .carousel-indicators .active {
+#sherCarousel .carousel-indicators .active, #tabrezCarousel .carousel-indicators .active, #honeyCarousel .carousel-indicators .active {
   background-color: rgba(100, 100, 100, 0.7); }
-#carousel-example-generic .carousel-indicators li {
+#sherCarousel .carousel-indicators li, #tabrezCarousel .carousel-indicators li, #honeyCarousel .carousel-indicators li {
   background-color: rgba(213, 213, 213, 0.7); }
 
 .modal-transparent {
@@ -607,7 +680,8 @@ hr {
   color: white;
   background-color: #222; }
   #contact a {
-    color: white !important; }
+    color: white !important;
+    text-decoration: none !important; }
   #contact i {
     color: #EC6862; }
 
@@ -624,6 +698,108 @@ hr {
 .onebyone-carosel .prev {
   left: -33.33%; }
 
+/* ================== Press Section CSS ================== */
+.press-wrapper {
+  padding: 7rem 5rem 7rem 5rem; }
+  .press-wrapper p.description {
+    font-size: 2rem;
+    /*font-weight: 600;*/
+    /*font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;*/
+    font-family: KulturistaMedium; }
+  .press-wrapper .first-character {
+    float: left;
+    font-size: 7.5rem;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: Kulturista; }
+  .press-wrapper .press-small {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: .5rem; }
+    .press-wrapper .press-small a {
+      color: #EC6862;
+      text-decoration: none; }
+  .press-wrapper .author {
+    font-size: 1.5rem !important;
+    /*padding: .5rem;*/
+    color: #EC6862 !important;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: KulturistaMedium;
+    padding-left: 5.8rem; }
+  .press-wrapper .read-more {
+    color: #EC6862; }
+
+/* ================== <-- END --> Press Section CSS ================== */
+/* ================== Menu Modal CSS ================== */
+.menu-modal .carousel-caption {
+  right: -35rem;
+  top: -0.2rem;
+  color: black; }
+.menu-modal .menu-btn-inverted {
+  color: #EC6862;
+  border: 1px solid #EC6862;
+  font-family: "ProximaNova"; }
+
+/* ================== <-- END --> Menu Modal CSS ================== */
+/* ================== Menu Booking Modal CSS ================== */
+.menu-booking-modal {
+  /*overflow-y: scroll;*/ }
+  .menu-booking-modal .menu-btn-inverted {
+    color: #EC6862;
+    border: 1px solid #EC6862;
+    font-family: "ProximaNova"; }
+  .menu-booking-modal .modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0 13.5rem; }
+    .menu-booking-modal .modal-dialog .modal-body .main {
+      padding: 6rem 4rem;
+      border: 1px solid #ddd; }
+    .menu-booking-modal .modal-dialog .menu-image {
+      height: 30rem; }
+  .menu-booking-modal .step .address-form {
+    padding: 2rem; }
+    .menu-booking-modal .step .address-form input {
+      width: 100%;
+      height: 4rem;
+      margin-bottom: 2rem;
+      border-radius: 0; }
+    .menu-booking-modal .step .address-form label {
+      font-weight: 200;
+      padding: 1rem 0; }
+  .menu-booking-modal .summary p {
+    line-height: 3rem;
+    font-size: 2rem; }
+  .menu-booking-modal .summary .icon i {
+    color: #EC6862;
+    font-size: 1.6rem;
+    position: relative;
+    top: .6rem; }
+  .menu-booking-modal ::-webkit-scrollbar {
+    width: 12px;
+    /* for vertical scrollbars */
+    height: 12px;
+    /* for horizontal scrollbars */ }
+  .menu-booking-modal ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); }
+  .menu-booking-modal ::-webkit-scrollbar-thumb {
+    background: #478982; }
+
+/* ================== <-- END --> Menu Booking Modal CSS ================== */
+/* === Overriding NL Language Form Css ==== */
+.nl-form {
+  font-size: 3.5rem !important; }
+  .nl-form .nl-field-toggle, .nl-form .nl-form input, .nl-form .nl-form select {
+    color: #EC6862 !important;
+    border-color: #EC6862 !important; }
+  .nl-form ul {
+    overflow-y: scroll;
+    max-height: 60rem; }
+
+/* === <-- END --> Overriding NL Language Form Css ==== */
 /* ================== Page2 BLOG CSS ================== */
 .blog-wrapper {
   margin-top: 6rem; }
@@ -686,20 +862,48 @@ hr {
 .center-align {
   text-align: -webkit-center; }
 
+.right-align {
+  text-align: -webkit-right; }
+
+.vertically-align-children {
+  display: flex;
+  align-items: center; }
+
+.margin-0 {
+  margin: 0 !important; }
+
 .padding-0 {
   padding: 0; }
 
 .padding-5 {
   padding: 5px; }
 
+.padding-3rem {
+  padding: 3rem !important; }
+
+.padding-right35px {
+  padding-right: 3.5rem !important; }
+
 .padding-left-10 {
   padding-left: 10px !important; }
+
+.padding-left-3rem {
+  padding-left: 3rem !important; }
 
 .padding-right-10 {
   padding-right: 10px !important; }
 
+.padding-top-15rem {
+  padding-top: 15rem !important; }
+
+.padding-bottom-2rem {
+  padding-bottom: 2rem !important; }
+
 .font-weight-600 {
   font-weight: 600 !important; }
+
+.margin-top-2rem {
+  margin-top: 2rem !important; }
 
 .xs-img img {
   max-width: 25%; }
@@ -720,6 +924,13 @@ hr {
   max-width: 100%; }
 .lg-img .sub-text {
   width: 100%; }
+
+.cs-color {
+  color: #EC6862; }
+
+.red-border {
+  border-color: #EF6868 !important;
+  box-shadow: 0px 0px 2px #ec7979 !important; }
 
 /* ================== MEDIA QUERIES ================== */
 @media (max-width: 992px) {

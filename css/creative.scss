@@ -186,13 +186,16 @@ aside {
     border-color: rgba(255, 255, 255, 0.3);
     background-color: transparent;
     .navbar-header .navbar-brand {
-      color: rgba(255, 255, 255, 0.7);
+      color: white;
+      font-weight: 900;
+      font-family: "ProximaNova";
       &:hover, &:focus {
         color: #fff;
       }
     }
     .nav > li > a {
-      color: rgba(255, 255, 255, 0.7);
+      color: white;
+      font-family: "ProximaNova";
       &:focus {
         color: rgba(255, 255, 255, 0.7);
       }
@@ -230,7 +233,7 @@ header {
   text-align: center;
   color: #fff;
   /*background: url(../img/cover1.jpg) no-repeat center center fixed;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover1.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cover3.jpg) no-repeat center center fixed;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -247,6 +250,7 @@ header {
         margin-bottom: 0;
         text-transform: uppercase;
         font-weight: 700;
+        font-size: 48px !important;
       }
       hr {
         margin: 30px auto;
@@ -638,9 +642,12 @@ body {
       background-color: transparent;
     }
     &[type="submit"]{
-        color: white;
-        background-color: $food-red;
-        border: 1px solid $food-red;
+      color: white;
+      background-color: $food-red;
+      border: 1px solid $food-red;
+      font-family: "ProximaNova";
+      font-weight: 900;
+      letter-spacing: 1px;
     }
   }
 }
@@ -684,8 +691,17 @@ hr {
 .profile-section{
     /*padding: 80px 0;*/
     .profile-row{
+      min-height: 500px;
+      .chef-profile-image {
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        height: 100%;
+        background-position: center !important;
+        background-size: cover !important;
+      }
       .image-col{
-        height: 40rem;
+        height: 50rem;
         overflow: hidden;
       }
       .name, .description{
@@ -694,6 +710,7 @@ hr {
       }
       .name{
         font-size: 2.5rem;
+        font-family: "GothamMedium";
       }
       .description{
         font-size: 2rem;
@@ -705,14 +722,86 @@ hr {
         a{
           color: white;
           text-decoration: none;
+          font-family: "ProximaNova";
         }
       }
       .menu-btn-inverted{
         color: $food-red;
         border: 1px solid $food-red;
+        font-family: "ProximaNova";
       }
     }
 }
+/* ================== Testimonial Section CSS ================== */
+.chef-registration-wrapper{
+  background-color: #222;
+  color: white;
+  padding: 5rem;  
+  .description{
+    text-align: center;
+    display: none;
+    p{
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem!important;  
+    }
+  }
+}
+/* ================== END Chef Registeration Section CSS ================== */
+
+/* ================== Testimonial Section CSS ================== */
+.testimonial-wrapper{
+  background-color: #f5f5f5;
+  padding: 5rem;  
+  .description{
+    text-align: center;
+    display: none;
+    p{
+      font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 2rem!important;  
+    }
+  }
+  .image{
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .2;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .active{
+    opacity: 1;
+  }
+  .desc-active{
+    display: block;
+  }
+  #img1{
+    background-image: url('../img/Testimonials/1.jpg');
+  }
+  #img2{
+    background-image: url('../img/Testimonials/2.jpg');
+  }
+  #img3{
+    background-image: url('../img/Testimonials/3.jpg');
+  }
+  #img4{
+    background-image: url('../img/Testimonials/4.jpg');
+  }
+  #img5{
+    background-image: url('../img/Testimonials/5.jpg');
+  }
+  #img6{
+    background-image: url('../img/Testimonials/6.jpg');
+  }
+}
+/* ================== END Testimonial Section CSS ================== */
+
 /* ================== Menu Modal CSS ================== */
 #modal1{
   .modal-content{
@@ -747,7 +836,7 @@ hr {
       width: 800px;
   } 
 }*/
-#carousel-example-generic{
+#sherCarousel, #tabrezCarousel, #honeyCarousel{
   img{
     height: 600px;
     margin: auto;
@@ -826,13 +915,15 @@ hr {
      width: 1170px;
   }
 }
-
 /* ================== END Menu Modal CSS ================== */
+
+
 #contact{
     color: white;
     background-color: #222;
     a{
         color: white!important;
+        text-decoration: none !important;
     }
     i{
         color: $food-red;
@@ -861,8 +952,147 @@ hr {
   }
 }
 
-/* ================== Page2 BLOG CSS ================== */
+/* ================== Press Section CSS ================== */
+.press-wrapper {
+  padding: 7rem 5rem 7rem 5rem;
+  p.description{
+    font-size: 2rem;
+    /*font-weight: 600;*/
+    /*font-family: "GothamXLight", "Helvetica Neue", Arial, sans-serif;*/
+    font-family: KulturistaMedium;
+  }
+  .first-character{
+    float: left;
+    font-size: 7.5rem; 
+    line-height: 60px; 
+    padding-top: 4px; 
+    padding-right: 8px; 
+    padding-left: 3px; 
+    font-family: Kulturista;
+  }
+  .press-small{
+    text-align: center;
+    font-size: 1.3rem;
+    padding: .5rem;
+    a{
+      color: #EC6862;
+      text-decoration: none;
+    }
+  }
+  .author{
+    font-size: 1.5rem!important;
+    /*padding: .5rem;*/
+    color: #EC6862!important;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: KulturistaMedium;
+    padding-left: 5.8rem;
+  }
+  .read-more{
+    color: #EC6862;
+  }
+}
+/* ================== <-- END --> Press Section CSS ================== */
 
+/* ================== Menu Modal CSS ================== */
+.menu-modal{
+  .carousel-caption{
+    right: -35rem;
+    top: -0.2rem;
+    color: black;
+  }
+  .menu-btn-inverted{
+    color: #EC6862;
+    border: 1px solid #EC6862;
+    font-family: "ProximaNova";
+  }
+}
+/* ================== <-- END --> Menu Modal CSS ================== */
+
+/* ================== Menu Booking Modal CSS ================== */
+.menu-booking-modal{
+  /*overflow-y: scroll;*/
+  .menu-btn-inverted{
+    color: #EC6862;
+    border: 1px solid #EC6862;
+    font-family: "ProximaNova";
+  }
+  .modal-dialog{
+    width: 100%;
+    height: 100%;
+    padding: 0 13.5rem;
+    .modal-body{
+      .main{
+        padding: 6rem 4rem;
+        border: 1px solid #ddd;
+      }
+    }
+    .menu-image{
+      height: 30rem;
+    }
+  }
+  .step{
+    .address-form{
+      padding: 2rem;
+      input{
+        width: 100%;
+        height: 4rem;
+        margin-bottom: 2rem;
+        border-radius: 0;
+      }
+      label{
+        font-weight: 200;
+        padding: 1rem 0;
+      }
+    }
+  }
+  .summary{
+    p{
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+    .icon{
+      i{
+        color: #EC6862;
+        font-size: 1.6rem;
+        position: relative;
+        top: .6rem;
+      }
+    }
+  }
+  ::-webkit-scrollbar
+  {
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+  }
+
+  ::-webkit-scrollbar-track
+  {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background: #478982;
+  }
+}
+/* ================== <-- END --> Menu Booking Modal CSS ================== */
+
+/* === Overriding NL Language Form Css ==== */
+.nl-form{
+  font-size: 3.5rem!important;
+  .nl-field-toggle, .nl-form input, .nl-form select{
+    color: #EC6862!important;
+    border-color: #EC6862!important;
+  }
+  ul{
+    overflow-y: scroll;
+    max-height: 60rem;
+  }
+}
+/* === <-- END --> Overriding NL Language Form Css ==== */
+
+/* ================== Page2 BLOG CSS ================== */
 .blog-wrapper{
   margin-top: 6rem;
 }
@@ -939,20 +1169,48 @@ hr {
 .center-align {
   text-align: -webkit-center;
 }
+.right-align {
+  text-align: -webkit-right;
+}
+.vertically-align-children{
+  display: flex;
+  align-items: center;
+}
+.margin-0{
+  margin: 0!important;
+}
 .padding-0 {
   padding: 0;
 }
 .padding-5{
   padding: 5px;
 }
+.padding-3rem{
+  padding: 3rem!important; 
+}
+.padding-right35px{
+  padding-right: 3.5rem!important;
+}
 .padding-left-10{
     padding-left: 10px!important;
+}
+.padding-left-3rem{
+  padding-left: 3rem!important;
 }
 .padding-right-10{
     padding-right: 10px!important;
 }
+.padding-top-15rem{
+    padding-top: 15rem!important;
+}
+.padding-bottom-2rem{
+  padding-bottom: 2rem!important;
+}
 .font-weight-600{
   font-weight: 600!important;
+}
+.margin-top-2rem{
+  margin-top: 2rem!important;
 }
 .xs-img{
   img {
@@ -985,6 +1243,13 @@ hr {
   .sub-text{
     width: 100%;
   }
+}
+.cs-color{
+  color: $food-red;
+}
+.red-border{
+  border-color: #EF6868 !important;
+  box-shadow: 0px 0px 2px rgb(236, 121, 121)!important;
 }
 
 /* ================== MEDIA QUERIES ================== */
