@@ -14,11 +14,12 @@ $(function() {
     .then(function(collections) {
       $.each(collections, function(index, collection) {
         var attributes = collection.attrs;
-        var collection_html = '<div class="merchant col-md-4" collection-id="'+attributes.collection_id+'"">\
+        var artisan_link = '/store/'+attributes.handle.replace(/\-/g, '');
+        var collection_html = '<a href="'+artisan_link+'"><div class="merchant col-md-4" collection-id="'+attributes.collection_id+'"">\
           <h4>'+ attributes.title +'</h4>\
           \
           <p>'+ attributes.body_html +'</p>\
-          </div>';
+          </div></a>';
         $('.merchants-row').append(collection_html);
       });
     }
