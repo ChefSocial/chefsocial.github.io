@@ -35,7 +35,7 @@ $(function() {
       $.each(collections, function(index, collection) {
         var attributes = collection.attrs;
         var collection_html = '<div class="collection" collection-id="'+attributes.collection_id+'"">\
-          <h4>'+ attributes.title +'</h4>\
+          <h4>'+ attributes.body_html +'</h4>\
           </div>';
         $('.collections').append(collection_html);
       });

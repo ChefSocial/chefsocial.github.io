@@ -317,6 +317,30 @@ h5.intro-box .intro-text:after {
   transition: all 0.3s ease 0s;
 }
 
+.merchants {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 5px;
+}
+.merchants .store-heading {
+  font: 600 34px/70px GothamXLight;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.merchant h4 {
+  font: 100 24px "Playfair Display";
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.merchant p {
+  font-family: "Playfair Display";
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .thin-header {
 font:100 60px/70px GothamXLight;
 color:#1b1b1b;
@@ -2912,3 +2936,5 @@ background-attachment:scroll;
 font:17px/17px KulturistaMedium;
 }
 }
+
+
