@@ -1,117 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Buy SDK Example -- Cart 001</title>
-  <link rel="stylesheet" href="index.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefSocial | Home Fine Dine Experience | Book Professional Chefs Online - Bangalore</title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
 
-  <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
-  <script src="index.js"></script>
-</head>
-<body>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/creative.css" type="text/css">
 
-  <!-- /store -->
-  <div class="collections">
-    <h2>Collections:</h2>
-  </div>
+    <!-- Font Lato -->
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  
+    <!-- Shopify -->
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
+    <script src="store-products.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img class="logo-light" src="/images/logo-light.png" alt="">
+          </a>
+        </div>
 
-  <!-- /store/collection-name -->
-  <h2>Products:</h2>
-  <div class="products">
-
-  </div>
-
-  <!-- /store/collection-name/product -->
-  <div class="product" id="buy-button-1">
-    <img class="variant-image">
-    <h1 class="product-title"></h1>
-    <h2 class="variant-title"></h2>
-    <h2 class="variant-price"></h2>
-    <div class="variant-selectors"></div>
-    <button class="btn buy-button js-prevent-cart-listener">Add To Cart</button>
-  </div>
-
-  <!-- .cart-tab start -->
-  <button class="btn btn--cart-tab js-prevent-cart-listener">
-    <span class="btn__counter"></span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon-cart icon-cart--side" viewBox="0 0 25 25" enable-background="new 0 0 25 25"><g fill="#fff"><path d="M24.6 3.6c-.3-.4-.8-.6-1.3-.6h-18.4l-.1-.5c-.3-1.5-1.7-1.5-2.5-1.5h-1.3c-.6 0-1 .4-1 1s.4 1 1 1h1.8l3 13.6c.2 1.2 1.3 2.4 2.5 2.4h12.7c.6 0 1-.4 1-1s-.4-1-1-1h-12.7c-.2 0-.5-.4-.6-.8l-.2-1.2h12.6c1.3 0 2.3-1.4 2.5-2.4l2.4-7.4v-.2c.1-.5-.1-1-.4-1.4zm-4 8.5v.2c-.1.3-.4.8-.5.8h-13l-1.8-8.1h17.6l-2.3 7.1z"></path><circle cx="9" cy="22" r="2"></circle><circle cx="19" cy="22" r="2"></circle></g></svg>
-  </button>
-  <!-- .cart-tab end -->
-
-
-  <!-- .cart begin -->
-  <div class="cart">
-
-    <!-- .cart-section begin // cart header -->
-    <div class="cart-section cart-section--top">
-      <h2 class="cart-title">Your cart</h2>
-      <button class="btn--close">
-        <span aria-role="hidden">×</span>
-        <span class="visuallyhidden">Close</span>
-      </button>
-    </div>
-    <!-- .cart-section end -->
-
-    <!-- .cart-form begin // cart body -->
-    <div class="cart-form">
-      <div class="cart-item-container cart-section">
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li class="page-scroll cta">
+              <a href="#alchemy">Alchemy</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#about">Apéro</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#case-study">Bento</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#case-study">Serendipity</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#services">Book Chef</a>
+            </li>
+            <li>
+              <a href="/store">My Cart</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-
-      <!-- .cart-bottom begin -->
-      <div class="cart-bottom">
-        <div class="cart-info clearfix cart-section">
-          <div class="type--caps cart-info__total cart-info__small">Total</div>
-          <div class="cart-info__pricing">
-            <span class="cart-info__small cart-info__total">CAD</span>
-            <span class="pricing pricing--no-padding"></span>
+      <!-- /.container -->
+    </nav>
+    <span class="collection-data" style="display: none;" data-collection="330494593"></span>
+    <section class="intro" style="background-image: url('/images/the-tenth-muse-banner.jpg');"">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="brand-heading">The Tenth Muse</h1>
+              <h5 class="intro-box">
+                <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Maxime reiciendis, at repellat repudiandae iste officia natus dolore <br> facere dolorum pariatur. Natus assumenda est facere <br> eaque,non officiis vero reiciendis quia.</p>
+              </h5>
+            </div>
           </div>
         </div>
-        <div class="cart-actions-container cart-section type--center">
-          <div class="cart-discount-notice cart-info__small">Shipping and discount codes are added at checkout.</div>
-          <input type="submit" class="btn btn--cart-checkout" id="checkout" name="checkout" value="Checkout">
-        </div>
       </div>
-      <!-- .cart-bottom end -->
-
-    </div>
-    <!-- .cart-form end -->
-
-  </div>
-  <!-- .cart end -->
-
-  <script id="CartItemTemplate" type="text/template">
-    <div class="cart-item">
-      <div class="cart-item__img"></div>
-      <div class="cart-item__content">
-        <div class="cart-item__content-row">
-          <div class="cart-item__variant-title"></div>
-          <span class="cart-item__title"></span>
-        </div>
-        <div class="cart-item__content-row">
-          <div class="cart-item__quantity-container">
-            <button class="btn--seamless quantity-decrement" type="button"><span>-</span><span class="visuallyhidden">Decrement</span></button>
-            <input class="cart-item__quantity" type="number" min="0" aria-label="Quantity">
-            <button class="btn--seamless quantity-increment" type="button"><span>+</span><span class="visuallyhidden">Increment</span></button>
+      <div class="page-scroller">
+       <img id="view-more-link" src="/images/down-caret.png" alt="">
+     </div>
+    </section>
+    <section>
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="merchants col-md-12">
+              <h2 class="store-heading">Products</h2>
+            </div>
           </div>
-          <span class="cart-item__price"></span>
+          <div class="row merchants-row">
+          </div>
         </div>
       </div>
-    </div>
-  </script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-49178120-19', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-
-</body>
+    </section>
+  </body>
 </html>
