@@ -334,7 +334,7 @@ h5.intro-box .intro-text:after {
   text-align: center;
   color: black;
   display: inline-block;
-  min-height: 65px;
+  min-height: 70px;
   width: 100%;
 }
 .merchant p {
@@ -352,7 +352,7 @@ h5.intro-box .intro-text:after {
 
 .merchant {
   height: 552px;
-  width: 100%;
+  margin-bottom: 60px;
 }
 .merchants-row a:nth-child(n+4) .merchant {
   margin-top: 90px;
