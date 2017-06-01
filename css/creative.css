@@ -333,6 +333,9 @@ h5.intro-box .intro-text:after {
   margin-bottom: 16px;
   text-align: center;
   color: black;
+  display: inline-block;
+  min-height: 65px;
+  width: 100%;
 }
 .merchant p {
   font-family: "Playfair Display";
@@ -349,6 +352,7 @@ h5.intro-box .intro-text:after {
 
 .merchant {
   height: 552px;
+  width: 100%;
 }
 .merchants-row a:nth-child(n+4) .merchant {
   margin-top: 90px;

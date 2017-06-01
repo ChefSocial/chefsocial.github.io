@@ -15,12 +15,12 @@ $(function() {
       // $('.products').empty();
       $.each(products, function(index, prod){
         var product_link = '';
-        var collection_html = '<a class="product-link" href="'+product_link+'"><div class="merchant col-md-4">\
+        var product_html = '<a class="product-link" href="'+product_link+'"><div class="merchant col-md-4" product-id="'+prod.id+'">\
           <h4>'+ prod.title +'</h4>\
           \
           <img class="product-image" src="'+ prod.images[0].src +'">\
           </div></a>';
-        $('.merchants-row').append(collection_html);
+        $('.merchants-row').append(product_html);
 
         // var prod_listing_html = '<div class="product-listing" product-id="'+prod.id+'"">\
         //   <h4>'+ prod.title +'</h4>\
